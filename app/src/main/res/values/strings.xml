@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">AgroLight</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_show_farms">Map</string>
+
+    <string name="hint">Search</string>
+    <string name="speech_prompt">Say Something</string>
+    <string name="speech_not_supported">speech to text doesn\'t seems supported</string>
+    <string name="menu.clear">clear</string>
+    <string name="menu.tts">text to speech</string>
+    <string name="menu.toggle.icon">Icon Visible</string>
+    <string name="menu.icon.type">Icon Type</string>
+
+    <string name="fsv.transition.search.layout">fsv_transition_search_layout</string>
+    <string name="title_activity_details">Details</string>
+    <string name="title_activity_form">Form</string>
+
+    <string name="category_profile">Profile</string>
+    <string name="label_surname">Surname:</string>
+    <string name="label_other_names">Names:</string>
+    <string name="label_gender"> Gender:</string>
+    <string name="label_age">Age:</string>
+    <string name="label_marital_status">Marital Status:</string>
+    <string name="label_household">House-Hold Size:</string>
+    <string name="label_phone_number">Phone Number:</string>
+    <string name="label_farm_size">Farm Size:</string>
+    <string name="label_avg_income_non_farming">Avg. Income From Non Farming:</string>
+    <string name="label_dry_season_business">Dry Season Business:</string>
+    <string name="label_avg_income_farming">Avg Income From Farming:</string>
+    <string name="label_dist_to_market">Distance To Market:</string>
+    <string name="label_produce_storage_capacity">Produce Storage Capacity:</string>
+    <string name="label_cooperative_membership">Cooperative Memebership:</string>
+    <string name="label_center_number">Center Number:</string>
+    <string name="label_center_name">Center Name:</string>
+    <string name="label_personal_serial_no">Serial Number:</string>
+    <string name="label_major_crops">Major Crops:</string>
+    <string name="label_major_livestock">Major Livestock:</string>
+    <string name="label_inputs_and_quantities">Inputs and Quantities:</string>
+    <string name="menu_registration">REGISTER</string>
+    <string name="menu_registration_subtext">Click To Register New Farmer</string>
+    <string name="search_button">SEARCH</string>
+    <string name="header">Plateau State Farmers Verification System</string>
+    <string name="label_bvn">BVN</string>
+    <string name="btn_confirm_transaction">Confirm</string>
+    <string name="label_unique_id">Identification No.</string>
+    <string name="label_transaction_id">Transaction Id</string>
+    <string name="label_total_farmers">Total No. Of Farmers:</string>
+    <string name="label_total_verified">Total Verified:</string>
+    <string name="label_total_stock">Total Stock:</string>
+    <string name="label_stock_balance">Stock Balance: </string>
+    <string name="label_header">TRANSACTION REPORT</string>
+    <string name="income_label">Farm Revenue</string>
+    <string name="sync_header">SYNC REPORT</string>
+    <string name="label_total_sync">Total Sync</string>
+    <string name="label_sync_balance">Pending</string>
+    <string name="welcome">Welcome To Plateau Farmers Database APP</string>
+    <string name="footnote">Home Of Peace and Tourism</string>
+    <string name="gov_header">His Excellency</string>
+    <string name="deputy_header">His Excellency</string>
+    <string name="title">The Executive Governor, \n  Rt. Hon. Simon Bako Lalong</string>
+    <string name="deputy">The Deputy Governor, \n Prof. Sonni Gwanle Tyoden</string>
+
+    <string name="content">This system is developed to verify farmers records already captured.</string>
+
+    <string name="label_username">Enter Username</string>
+    <string name="label_password">Enter Password</string>
+
+    <string name="menu_report">Transaction Report</string>
+    <string name="menu_report_subtext">Click To View Report</string>
+
+    <string name="menu_sign_out">SIGN OUT</string>
+    <string name="menu_sign_out_subtext">Click To sign Out Of APP.</string>
+
+    <string name="farm_label">Farm Profile</string>
+    <string name="income_details">Farm Revenue</string>
+    <string name="verified_label">VERIFIED</string>
+    <string name="update_label">EDIT</string>
+    <string name="confirm_update">UPDATE</string>
+    <string name="register_button">SUBMIT</string>
+
+
+    <string name="cardview_radius_seekbar_text">Radius</string>
+    <string name="cardview_elevation_seekbar_text">Elevation</string>
+    <string name="title_activity_edit">Edit Record</string>
+    <string name="title_activity_registration">Registration</string>
+
+    <string-array name="marital_status">
+        <item name="">Select Marital Status</item>
+        <item>Divorced</item>
+        <item>Married</item>
+        <item>Single</item>
+    </string-array>
+
+    <string-array name="crop_type">
+        <item>Select Crop Type</item>
+        <item>Grains</item>
+        <item>Tubers</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item name=" ">Select Gender</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string name="title_activity_index">Welcome</string>
+    <string name="title_activity_transaction">Transaction</string>
+    <string name="title_activity_confirm">ConfirmActivity</string>
+    <string name="title_activity_report">Transaction</string>
+    <string name="title_activity_sync">Sync Report</string>
+    <string name="title_activity_main">Search</string>
+    <string name="title_activity_main2">Scan Barcode</string>
+    <string name="title_activity_menu">Menu</string>
+    <!--<string name="title_activity_login"></string>-->
+
+    <string name="menu_scan">View All Agents</string>
+    <string name="menu_number">Search Record</string>
+    <string name="menu_register_agents">Register new Agents</string>
+    <string name="menu_register">Register new Farmers</string>
+    <string name="menu_reports">Reports</string>
+    <string name="menu_sync">Sync Records</string>
+    <string name="title_activity_register_agent">RegisterAgent</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_barcode_scanner">BarcodeScanner</string>
+    <string name="title_activity_agent_menu">AgentMenu</string>
+    <string name="title_activity_register_farmers">RegisterFarmers</string>
+    <string name="title_activity_report_farming">ReportFarmingActivity</string>
+    <string name="title_activity_checking_barcode">CheckingBarcode</string>
+    <string name="title_activity_landing_page">LandingPage</string>
+    <string name="title_activity_agent_login">AgentLogin</string>
+    <string name="title_activity_admin_menu">AdminMenu</string>
+    <string name="admin_searchAgent">Search Agent</string>
+    <string name="admin_search_farmer">Search Farmer</string>
+    <string name="admin_show_farms">Show Farms</string>
+    <string name="admin_view_agents">View All Agents</string>
+    <string name="admin_view_farmers">View All Farmers</string>
+    <string name="label_lga">Local Government</string>
+
+    <string-array name="lgas">
+        <item>Select LGA</item>
+        <item>Barkin Ladi</item>
+        <item>Bassa</item>
+        <item>Bokkos</item>
+        <item>Jos-East</item>
+        <item>Jos-North</item>
+        <item>Jos-South</item>
+        <item>Kanke Kanam</item>
+        <item>Langtang North </item>
+        <item>Langtang South</item>
+        <item>Mangu</item>
+        <item>Mikang</item>
+        <item>Pankshin</item>
+        <item>Qua'an Pan</item>
+        <item>Ryom</item>
+        <item>Shendam</item>
+        <item>Wase</item>
+
+    </string-array>
+</resources>

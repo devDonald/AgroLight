@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "493037032730",
+    "firebase_url": "https://smtagro-40c6a.firebaseio.com",
+    "project_id": "smtagro-40c6a",
+    "storage_bucket": "smtagro-40c6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493037032730:android:5b4e71b9b3374396",
+        "android_client_info": {
+          "package_name": "smtagro.donald.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493037032730-qqovsd3oat60jhot173tpeqd9htak28r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "smtagro.donald.com",
+            "certificate_hash": "ddd41d1ef153c4939a3bc05d68ceff404439546b"
+          }
+        },
+        {
+          "client_id": "493037032730-v1aae3h2975q1l9nfti6hg309vq7fuo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVZvRpRPET_3sYHfq2KvyeoP2_9epeEjM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493037032730-v1aae3h2975q1l9nfti6hg309vq7fuo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

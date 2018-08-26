@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="admin_searchAgent">Search Agent</string>
+    <string name="admin_search_farmer">Search Farmer</string>
+    <string name="admin_show_farms">Show Farms</string>
+    <string name="admin_view_agents">View All Agents</string>
+    <string name="admin_view_farmers">View All Farmers</string>
+    <string name="label_lga">Local Government</string>
+</resources>

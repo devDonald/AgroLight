@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Admin.AdminMenu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="5dp"
+            android:elevation="5dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <LinearLayout
+                    android:id="@+id/relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/btn_admin_search_agent"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/fbutton_color_carrot"
+                        android:text="@string/admin_searchAgent"
+                        android:textAllCaps="false"
+                        android:padding="10dp"
+                        android:drawableLeft="@android:drawable/ic_menu_search"
+                        android:paddingLeft="5dp"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                    <Button
+                        android:id="@+id/btn_admin_search_farmer"
+                        android:layout_width="match_parent"
+                        android:drawableLeft="@android:drawable/ic_menu_search"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/color_brown"
+                        android:text="@string/admin_search_farmer"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                    <Button
+                        android:id="@+id/btn_admin_register_agent"
+                        android:layout_width="match_parent"
+                        android:drawableLeft="@drawable/ic_add_agent"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:background="@color/color_brown"
+                        android:text="@string/menu_register_agents"
+                        android:textAllCaps="false"
+                        android:layout_below="@+id/btn_barcode"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+
+                    <Button
+                        android:id="@+id/btn_admin_show_farms"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/fbutton_color_amethyst"
+                        android:text="@string/admin_show_farms"
+                        android:drawableLeft="@android:drawable/ic_popup_sync"
+                        android:textAllCaps="false"
+                        android:paddingLeft="10dp"
+                        android:layout_below="@+id/btn_register"
+                        android:paddingStart="5dp"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:background="@color/colorPrimary"
+                        android:id="@+id/btn_admin_view_agents"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:drawableLeft="@android:drawable/ic_menu_view"
+                        android:text="@string/admin_view_agents"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        />
+
+                    <Button
+                        android:layout_margin="10dp"
+                        android:background="@color/colorPrimary"
+                        android:id="@+id/btn_admin_view_farmers"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignBaseline="@+id/btn_signout"
+                        android:layout_alignBottom="@+id/btn_signout"
+                        android:drawableLeft="@android:drawable/ic_menu_view"
+                        android:text="@string/admin_view_farmers"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp"
+                        />
+
+
+                    <Button
+                        android:id="@+id/btn_admin_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/fbutton_color_emerald"
+                        android:drawableLeft="@android:drawable/ic_lock_lock"
+                        android:text="@string/menu_sign_out"
+                        android:layout_below="@+id/btn_sync"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

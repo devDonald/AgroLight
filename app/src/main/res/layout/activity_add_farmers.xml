@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Agents.AddFarmers">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+
+                card_view:cardElevation="@dimen/cardElevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="6dp"
+                    android:orientation="vertical">
+
+                    <TextView style="@style/Categories"
+                        android:id="@+id/label_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/category_profile"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_marginTop="15dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:rotation="180"
+                        android:background="@android:color/holo_green_light"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/names1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="textPersonName"
+                            android:hint="Full name" />
+
+                        <EditText
+                            android:id="@+id/age1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="120"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:hint="@string/label_age"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/household_size1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:inputType="number"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_household"/>
+
+                        <EditText
+                            android:id="@+id/phone1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:hint="@string/label_phone_number"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <Spinner
+                            android:id="@+id/gender1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:entries="@array/genders" />
+
+                        <Spinner
+                            android:id="@+id/marital_status1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:entries="@array/marital_status" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <Spinner
+                            android:id="@+id/sp_lga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:entries="@array/lgas" />
+
+                        <EditText
+                            android:id="@+id/etCenterNum1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:hint="@string/label_center_number"/>
+
+
+                        <EditText
+                            android:id="@+id/etCenterName1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_center_name"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvFarm"
+                android:layout_below="@+id/profile"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/cardElevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:elevation="6dp">
+
+                    <TextView style="@style/Categories"
+                        android:id="@+id/label_farm_profile"
+                        android:text="@string/farm_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_marginTop="@dimen/text_margin" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:rotation="180"
+                        android:background="@android:color/holo_green_light"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/farmsize1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:hint="@string/label_farm_size"/>
+
+                        <EditText
+                            android:id="@+id/distance_to_market1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_dist_to_market"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/avg_income_farming1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:hint="@string/label_avg_income_farming"/>
+
+                        <EditText
+                            android:id="@+id/avg_income_non_farm1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:hint="@string/label_avg_income_non_farming"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/major_crops1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_major_crops"/>
+
+                        <EditText
+                            android:id="@+id/major_livestock1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_major_livestock"/>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvFinance"
+                android:layout_below="@+id/cvFarm"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/cardElevation">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:elevation="6dp">
+
+                    <TextView style="@style/Categories"
+                        android:id="@+id/label_income_profile1"
+                        android:text="@string/income_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_marginTop="@dimen/text_margin" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:rotation="180"
+                        android:background="@android:color/holo_green_light"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/inputs_and_quantities1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_inputs_and_quantities"/>
+
+                        <EditText
+                            android:id="@+id/produce_storage_capacity1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_produce_storage_capacity"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:id="@+id/cooperative_membership1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_cooperative_membership"/>
+
+                        <EditText
+                            android:id="@+id/etEnteredBy1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="number"
+                            android:hint="entered by"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dp"
+                android:paddingStart="2.0dp"
+                android:paddingEnd="2.0dp"
+                android:paddingBottom="1.0dp"
+                android:layout_below="@+id/cvFinance"
+                android:weightSum="1">
+
+
+                <Button
+                    android:id="@+id/btnRegister1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorAccent"
+                    android:minHeight="@dimen/demo_button_min_height"
+                    android:minWidth="@dimen/demo_button_min_width"
+                    android:text="@string/register_button"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

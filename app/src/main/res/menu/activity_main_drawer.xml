@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_add_farmers"
+            android:icon="@drawable/ic_add_farmer"
+            android:title="Add Farmer" />
+        <item
+            android:id="@+id/nav_view_farmers"
+            android:icon="@drawable/view_icon"
+            android:title="View All Farmers" />
+        <item
+            android:id="@+id/nav_report_activities"
+            android:icon="@drawable/report"
+            android:title="Report Farming Activities" />
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/ic_password"
+            android:title="Change Password" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/exit_app"
+            android:title="Logout" />
+
+    </group>
+
+</menu>
