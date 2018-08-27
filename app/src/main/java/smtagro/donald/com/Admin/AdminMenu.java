@@ -41,7 +41,8 @@ public class AdminMenu extends AppCompatActivity {
         searchAgent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent addAgent = new Intent(AdminMenu.this,SearchAgent.class);
+                startActivity(addAgent);
             }
         });
         searchFarmer.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +61,7 @@ public class AdminMenu extends AppCompatActivity {
         viewAgents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addAgent = new Intent(AdminMenu.this,AddAgents.class);
+                Intent addAgent = new Intent(AdminMenu.this,ViewAgents.class);
                 startActivity(addAgent);
             }
         });

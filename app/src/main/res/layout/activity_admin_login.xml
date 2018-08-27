@@ -4,9 +4,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorPrimary"
-    tools:context=".Admin.AdminLogin"
-    >
+    android:background="@drawable/bk"
+    tools:context=".Admin.AdminLogin" >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,6 +24,9 @@
                 android:textStyle="bold"
                 android:textSize="25sp"
                 android:textColor="@android:color/white"
+                android:shadowDy="10"
+                android:shadowDx="10"
+                android:shadowColor="@android:color/black"
                 android:layout_marginTop="20sp"
                 android:gravity="center"/>
 
@@ -35,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="100dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 >
@@ -54,12 +56,14 @@
                         android:layout_marginTop="20dp"
                         app:cardElevation="16dp"
                         app:cardCornerRadius="8dp">
+
                         <EditText
                             android:drawableLeft="@drawable/ic_email_black_24dp"
                             android:padding="8dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Email"
+                            android:drawablePadding="10dp"
                             android:inputType="textEmailAddress"
                             android:id="@+id/et_admin_email"
                             />
@@ -73,9 +77,14 @@
                         android:background="@drawable/button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="50dp"
                         app:cardElevation="16dp"
                         app:cardCornerRadius="8dp">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="true">
 
                         <EditText
                             android:padding="8dp"
@@ -84,10 +93,15 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Password"
+                            android:drawablePadding="10dp"
                             android:inputType="textPassword"
                             android:id="@+id/et_admin_password"
                             android:maxLength="8"
                             />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
 
 
 
@@ -101,12 +115,17 @@
                 android:id="@+id/admin_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button"
+                android:background="@drawable/btn_bkg"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="40dp"
-                android:text="Login"/>
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="5"
+                android:shadowDy="5"/>
         </RelativeLayout>
 
     </ScrollView>

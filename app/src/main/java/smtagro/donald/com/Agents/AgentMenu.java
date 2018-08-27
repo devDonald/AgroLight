@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -32,10 +33,17 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import smtagro.donald.com.LandingPage;
 import smtagro.donald.com.R;
+import smtagro.donald.com.models.AgentModel;
 
 public class AgentMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -62,10 +70,12 @@ public class AgentMenu extends AppCompatActivity
     private int LOCATION_PERMISSION_CODE = 130;
     //Bundle data
     private Location location;
-    private String lName, id, fName, country;
+    private String lName, id, fName, email,image,onlineEmail;
     private double latitude, longitude;
     private FirebaseAuth.AuthStateListener authListener;
-    private DatabaseReference userRef;
+    private DatabaseReference agentRef;
+    private TextView agentName, agentEmail;
+    private CircleImageView agentImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +83,15 @@ public class AgentMenu extends AppCompatActivity
         setContentView(R.layout.activity_agent_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mAuth=FirebaseAuth.getInstance();
+        agentRef = FirebaseDatabase.getInstance().getReference().child("Agents");
+        //get current user
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        final String uid = user.getUid();
+        email = user.getEmail();
+        Log.d("email",""+email);
+
 
         mAuth = FirebaseAuth.getInstance();
         authListener = new FirebaseAuth.AuthStateListener() {
@@ -107,6 +126,52 @@ public class AgentMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View hView = navigationView.getHeaderView(0);
+
+        agentName = hView.findViewById(R.id.profile_agent_name);
+        agentEmail = hView.findViewById(R.id.profile_agent_email);
+        agentImage = hView.findViewById(R.id.profile_agent_image);
+
+
+        try {
+            Log.d("uid",""+uid);
+            agentRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+
+                    for (DataSnapshot ds :dataSnapshot.getChildren()){
+                        AgentModel model = ds.getValue(AgentModel.class);
+
+                        onlineEmail = model.getEmail();
+                        Log.d("online",""+onlineEmail);
+
+                        if (email.matches(onlineEmail)){
+                            fName=model.getfName();
+                            Log.d("fname",""+fName);
+
+                            lName=model.getlName();
+                            Log.d("lname",""+lName);
+
+                            image = model.getImage();
+
+                            agentName.setText(fName+" "+lName);
+                            agentEmail.setText(email);
+                            Picasso.with(getApplicationContext()).load(image).into(agentImage);
+                        }
+                    }
+
+                    }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -147,9 +212,7 @@ public class AgentMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_profile) {
-
-        } else if (id == R.id.nav_add_farmers) {
+         if (id == R.id.nav_add_farmers) {
 
         } else if (id == R.id.nav_view_farmers) {
 

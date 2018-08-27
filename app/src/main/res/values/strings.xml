@@ -139,6 +139,7 @@
     <string name="admin_view_agents">View All Agents</string>
     <string name="admin_view_farmers">View All Farmers</string>
     <string name="label_lga">Local Government</string>
+    <string name="search">Search Agent by First Name</string>
 
     <string-array name="lgas">
         <item>Select LGA</item>
