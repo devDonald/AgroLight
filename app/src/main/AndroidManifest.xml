@@ -48,13 +48,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Agents.AddFarmers" />
-        <activity android:name=".Admin.AddAgents" />
-        <activity android:name=".Agents.ViewFarmers" />
-        <activity android:name=".Agents.ResetPassword" />
-        <activity android:name=".Admin.ViewAgents" />
-        <activity android:name=".Admin.SearchAgent" />
-        <activity android:name=".Admin.SearchFarmer" />
+        <activity android:name=".Agents.AddFarmers"
+            android:label="Add Farmer"/>
+        <activity android:name=".Admin.AddAgents"
+            android:label="Add Agent"/>
+        <activity android:name=".Agents.ViewFarmers"
+            android:label="View Farmers"/>
+        <activity android:name=".Agents.ResetPassword"
+            android:label="Change Password"/>
+        <activity android:name=".Admin.ViewAgents"
+            android:label="View Agents"/>
+        <activity android:name=".Admin.SearchAgent"
+            android:label="Search Agent"/>
+        <activity android:name=".Admin.SearchFarmer"
+            android:label="Search Farmer"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -69,13 +76,15 @@
 
         <activity
             android:name=".Admin.ShowFarms"
-            android:label="@string/title_activity_show_farms" />
+            android:label="AgroLight Registered Farms" />
         <activity android:name=".ReportFarming" />
         <activity android:name=".Admin.AdminLogin" />
         <activity android:name=".Agents.AgentLogin" />
         <activity android:name=".Intro" />
-        <activity android:name=".Admin.AgentDetails" />
-        <activity android:name=".Admin.FarmerDetails" />
+        <activity android:name=".Admin.AgentDetails"
+            android:label="AgroLight Agent"/>
+        <activity android:name=".Admin.FarmerDetails"
+            android:label="AgroLight Farmer"/>
     </application>
 
 </manifest>

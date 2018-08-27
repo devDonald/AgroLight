@@ -1,81 +1,71 @@
 package smtagro.donald.com.models;
 
-/**
- * Created by OBEYA on 4/2/2017.
- */
 
 public class FarmersModel {
-    private String _id;
-    private String name;
+    private String names;
     private String gender;
-    private String age;
+    private String age,lga;
     private String marital_status;
     private String farm_size;
     private String household_size;
     private String phone_number;
     private String avg_income_non_farming;
-    private String dry_season_business;
     private String avg_income_farming;
     private String distance_to_market;
     private String produce_storage_capacity;
     private String cooperative_membership;
     private String center_number;
     private String center_name;
-    private String personal_serial_number;
     private String major_crops;
     private String major_livestock;
     private String inputs_and_quantities;
-    private String bvn;
-    private String passport;
-    private String Transaction_id;
-    private String Status;
-    private String Center_num;
-    private String unique_farmer_num;
-    private String barcode;
-    private String sync;
+    private String bvn,agentName;
+    private String FIN;
+    private String farmerImage,farmImage;
 
+    public FarmersModel() {
 
-    public FarmersModel(String name, String gender, String age, String marital_status, String farm_size, String household_size, String phone_number, String avg_income_non_farming, String dry_season_business, String avg_income_farming, String distance_to_market, String produce_storage_capacity, String cooperative_membership, String center_number, String center_name, String personal_serial_number, String major_crops, String major_livestock, String inputs_and_quantities) {
-        this.name = name;
+    }
+
+    public FarmersModel(String names, String gender, String age, String lga,
+                        String marital_status, String farm_size, String household_size,
+                        String phone_number, String avg_income_non_farming,
+                        String avg_income_farming, String distance_to_market,
+                        String produce_storage_capacity, String cooperative_membership,
+                        String center_number, String center_name, String major_crops,
+                        String major_livestock, String inputs_and_quantities, String bvn,
+                        String agentName, String FIN, String farmerImage, String farmImage) {
+        this.names = names;
         this.gender = gender;
         this.age = age;
+        this.lga = lga;
         this.marital_status = marital_status;
         this.farm_size = farm_size;
         this.household_size = household_size;
         this.phone_number = phone_number;
         this.avg_income_non_farming = avg_income_non_farming;
-        this.dry_season_business = dry_season_business;
         this.avg_income_farming = avg_income_farming;
         this.distance_to_market = distance_to_market;
         this.produce_storage_capacity = produce_storage_capacity;
         this.cooperative_membership = cooperative_membership;
         this.center_number = center_number;
         this.center_name = center_name;
-        this.personal_serial_number = personal_serial_number;
         this.major_crops = major_crops;
         this.major_livestock = major_livestock;
         this.inputs_and_quantities = inputs_and_quantities;
+        this.bvn = bvn;
+        this.agentName = agentName;
+        this.FIN = FIN;
+        this.farmerImage = farmerImage;
+        this.farmImage = farmImage;
     }
 
-
-    public FarmersModel() {
-
+    public String getNames() {
+        return names;
     }
 
-    public String getID() {
-        return _id;
-    }
-
-    public void setID(String _id) {
-        this._id = _id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setNames(String names) {
+        this.names = names;
     }
 
     public String getGender() {
@@ -92,6 +82,14 @@ public class FarmersModel {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public String getLga() {
+        return lga;
+    }
+
+    public void setLga(String lga) {
+        this.lga = lga;
     }
 
     public String getMarital_status() {
@@ -132,14 +130,6 @@ public class FarmersModel {
 
     public void setAvg_income_non_farming(String avg_income_non_farming) {
         this.avg_income_non_farming = avg_income_non_farming;
-    }
-
-    public String getDry_season_business() {
-        return dry_season_business;
-    }
-
-    public void setDry_season_business(String dry_season_business) {
-        this.dry_season_business = dry_season_business;
     }
 
     public String getAvg_income_farming() {
@@ -190,14 +180,6 @@ public class FarmersModel {
         this.center_name = center_name;
     }
 
-    public String getPersonal_serial_number() {
-        return personal_serial_number;
-    }
-
-    public void setPersonal_serial_number(String personal_serial_number) {
-        this.personal_serial_number = personal_serial_number;
-    }
-
     public String getMajor_crops() {
         return major_crops;
     }
@@ -221,6 +203,7 @@ public class FarmersModel {
     public void setInputs_and_quantities(String inputs_and_quantities) {
         this.inputs_and_quantities = inputs_and_quantities;
     }
+
     public String getBvn() {
         return bvn;
     }
@@ -229,67 +212,35 @@ public class FarmersModel {
         this.bvn = bvn;
     }
 
-    public String getPassport() {
-        return passport;
+    public String getAgentName() {
+        return agentName;
     }
 
-    public void setPassport(String passport) {
-        this.passport = passport;
+    public void setAgentName(String agentName) {
+        this.agentName = agentName;
     }
 
-    public String getTransaction_id() {
-        return Transaction_id;
+    public String getFIN() {
+        return FIN;
     }
 
-    public void setTransaction_id(String transaction_id) {
-        Transaction_id = transaction_id;
+    public void setFIN(String FIN) {
+        this.FIN = FIN;
     }
 
-    public String getStatus() {
-        return Status;
+    public String getFarmerImage() {
+        return farmerImage;
     }
 
-    public void setStatus(String status) {
-        Status = status;
+    public void setFarmerImage(String farmerImage) {
+        this.farmerImage = farmerImage;
     }
 
-    public String getCenter_num() {
-        return Center_num;
+    public String getFarmImage() {
+        return farmImage;
     }
 
-    public void setCenter_num(String center_num) {
-        Center_num = center_num;
+    public void setFarmImage(String farmImage) {
+        this.farmImage = farmImage;
     }
-
-    public String getUnique_farmer_num() {
-        return unique_farmer_num;
-    }
-
-    public void setUnique_farmer_num(String unique_farmer_num) {
-        this.unique_farmer_num = unique_farmer_num;
-    }
-
-    public String getBarcode() {
-        return barcode;
-    }
-
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
-    }
-
-    public String getSync() {
-        return sync;
-    }
-
-    public void setSync(String sync) {
-        this.sync = sync;
-    }
-
-//    public String getRegistration_id() {
-//        return registration_id;
-//    }
-//
-//    public void setRegistration_id(String registration_id) {
-//        this.registration_id = registration_id;
-//    }
 }

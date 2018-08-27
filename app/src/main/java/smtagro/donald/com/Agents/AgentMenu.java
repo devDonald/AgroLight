@@ -213,10 +213,15 @@ public class AgentMenu extends AppCompatActivity
         int id = item.getItemId();
 
          if (id == R.id.nav_add_farmers) {
+             Intent landingPage = new Intent(AgentMenu.this,AddFarmers.class);
+             startActivity(landingPage);
 
         } else if (id == R.id.nav_view_farmers) {
 
         } else if (id == R.id.nav_change_password) {
+
+             Intent reset = new Intent(AgentMenu.this,ResetPassword.class);
+             startActivity(reset);
 
         } else if (id == R.id.nav_logout) {
 
