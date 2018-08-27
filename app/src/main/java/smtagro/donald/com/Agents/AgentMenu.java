@@ -84,10 +84,6 @@ public class AgentMenu extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        agentName = findViewById(R.id.profile_agent_name);
-        agentEmail = findViewById(R.id.profile_agent_email);
-        agentImage = findViewById(R.id.profile_agent_image);
-
         mAuth=FirebaseAuth.getInstance();
         agentRef = FirebaseDatabase.getInstance().getReference().child("Agents");
         //get current user
@@ -131,6 +127,13 @@ public class AgentMenu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        View hView = navigationView.getHeaderView(0);
+
+        agentName = hView.findViewById(R.id.profile_agent_name);
+        agentEmail = hView.findViewById(R.id.profile_agent_email);
+        agentImage = hView.findViewById(R.id.profile_agent_image);
+
+
         try {
             Log.d("uid",""+uid);
             agentRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -152,7 +155,7 @@ public class AgentMenu extends AppCompatActivity
 
                             image = model.getImage();
 
-                            //agentName.setText(fName+" "+lName);
+                            agentName.setText(fName+" "+lName);
                             agentEmail.setText(email);
                             Picasso.with(getApplicationContext()).load(image).into(agentImage);
                         }
