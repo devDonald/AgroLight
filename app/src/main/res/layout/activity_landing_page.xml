@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bk"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".LandingPage">
 
@@ -20,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
             android:orientation="vertical">
 
             <LinearLayout
@@ -38,12 +37,11 @@
                     android:id="@+id/bt_admin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/btn_bkg"
+                    android:background="@drawable/button_new"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="80dp"
-                    android:textColor="#fff"
                     android:textStyle="bold"
                     android:textSize="23sp"
                     android:text="Admin Login"/>
@@ -52,13 +50,14 @@
                     android:id="@+id/bt_agent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_new"
+                    android:background="@drawable/btn_bkg"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="20dp"
                     android:textStyle="bold"
                     android:textSize="23sp"
+                    android:textColor="#fff"
                     android:text="Agent Login"/>
 
             </LinearLayout>

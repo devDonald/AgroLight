@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Admin.AddAgents">
 
@@ -17,7 +18,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,7 +57,8 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/border"
-                    android:hint="First name"/>
+                    android:hint="First name"
+                    android:textColorHint="@android:color/black"/>
 
                 <EditText
                     android:id="@+id/etLname"
@@ -66,7 +69,8 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/border"
-                    android:hint="last name"/>
+                    android:hint="last name"
+                    android:textColorHint="@android:color/black"/>
 
                 <EditText
                     android:id="@+id/etPhone"
@@ -79,7 +83,8 @@
                     android:inputType="phone"
                     android:maxLength="11"
                     android:background="@drawable/border"
-                    android:hint="phone number"/>
+                    android:hint="phone number"
+                    android:textColorHint="@android:color/black"/>
 
                 <EditText
                     android:id="@+id/etEmail"
@@ -91,7 +96,8 @@
                     android:layout_marginBottom="10dp"
                     android:inputType="textEmailAddress"
                     android:background="@drawable/border"
-                    android:hint="Email"/>
+                    android:hint="Email"
+                    android:textColorHint="@android:color/black"/>
 
 
                 <EditText
@@ -103,7 +109,9 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/border"
-                    android:hint="Address"/>
+                    android:hint="Address"
+                    android:textColorHint="@android:color/black"/>
+
                 <Spinner
                     android:id="@+id/sp_lgaa"
                     android:layout_width="match_parent"
@@ -122,7 +130,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Register"/>
+                    android:text="Register"
+                    android:background="@drawable/btn_bkg"/>
 
             </LinearLayout>
 

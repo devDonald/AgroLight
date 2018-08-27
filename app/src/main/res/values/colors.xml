@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6bb821</color>
-    <color name="colorPrimaryDark">#6bb821</color>
+    <color name="colorPrimaryDark">#a1ec59</color>
     <color name="colorAccent">#FF257C1D</color>
     <color name="background">#cccccc</color>
+    <color name="colorFaded">#FF257C1D</color>
 
 
     <color name="fbutton_default_color">#3eadeb</color>
