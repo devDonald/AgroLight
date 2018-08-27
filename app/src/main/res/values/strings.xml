@@ -90,7 +90,7 @@
     <string name="title_activity_registration">Registration</string>
 
     <string-array name="marital_status">
-        <item name="">Select Marital Status</item>
+        <item name="">Marital Status</item>
         <item>Divorced</item>
         <item>Married</item>
         <item>Single</item>
@@ -103,7 +103,7 @@
     </string-array>
 
     <string-array name="genders">
-        <item name=" ">Select Gender</item>
+        <item name=" ">Gender</item>
         <item>Female</item>
         <item>Male</item>
     </string-array>

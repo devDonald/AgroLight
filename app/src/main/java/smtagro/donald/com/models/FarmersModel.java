@@ -21,7 +21,7 @@ public class FarmersModel {
     private String inputs_and_quantities;
     private String bvn,agentName;
     private String FIN;
-    private String farmerImage,farmImage;
+    private String farmerImage;
 
     public FarmersModel() {
 
@@ -34,7 +34,7 @@ public class FarmersModel {
                         String produce_storage_capacity, String cooperative_membership,
                         String center_number, String center_name, String major_crops,
                         String major_livestock, String inputs_and_quantities, String bvn,
-                        String agentName, String FIN, String farmerImage, String farmImage) {
+                        String agentName, String FIN, String farmerImage) {
         this.names = names;
         this.gender = gender;
         this.age = age;
@@ -57,7 +57,6 @@ public class FarmersModel {
         this.agentName = agentName;
         this.FIN = FIN;
         this.farmerImage = farmerImage;
-        this.farmImage = farmImage;
     }
 
     public String getNames() {
@@ -236,11 +235,4 @@ public class FarmersModel {
         this.farmerImage = farmerImage;
     }
 
-    public String getFarmImage() {
-        return farmImage;
-    }
-
-    public void setFarmImage(String farmImage) {
-        this.farmImage = farmImage;
-    }
 }

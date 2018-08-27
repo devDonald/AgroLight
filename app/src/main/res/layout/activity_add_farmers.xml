@@ -96,6 +96,7 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="number"
+                            android:maxLength="11"
                             android:hint="@string/label_bvn"/>
 
                     </LinearLayout>
@@ -240,17 +241,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp">
-                        <ImageView
-                            android:layout_gravity="center"
-                            android:id="@+id/farmer_farm_snap"
-                            android:layout_width="200dp"
-                            android:layout_height="150dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:layout_marginBottom="10dp"
-                            android:src="@drawable/ic_snap_farm"
-                            />
 
                         <EditText
                             android:id="@+id/farmsize1"
@@ -419,7 +409,7 @@
                             android:layout_weight="50"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
-                            android:inputType="number"
+                            android:inputType="text"
                             android:hint="entered by"/>
 
                     </LinearLayout>

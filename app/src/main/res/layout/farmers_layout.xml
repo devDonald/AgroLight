@@ -60,7 +60,7 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address "/>
+                android:text="Center Name: "/>
             <TextView
                 android:layout_marginLeft="22dp"
                 android:layout_width="wrap_content"

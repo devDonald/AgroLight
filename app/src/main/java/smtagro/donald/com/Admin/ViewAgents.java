@@ -35,7 +35,6 @@ public class ViewAgents extends AppCompatActivity {
 
         agentsDatabase = FirebaseDatabase.getInstance().getReference().child("Agents");
 
-
     }
 
     @Override

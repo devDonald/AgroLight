@@ -13,7 +13,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -43,6 +42,7 @@ import com.squareup.picasso.Picasso;
 import de.hdodenhof.circleimageview.CircleImageView;
 import smtagro.donald.com.LandingPage;
 import smtagro.donald.com.R;
+import smtagro.donald.com.ReportFarming;
 import smtagro.donald.com.models.AgentModel;
 
 public class AgentMenu extends AppCompatActivity
@@ -76,7 +76,6 @@ public class AgentMenu extends AppCompatActivity
     private DatabaseReference agentRef;
     private TextView agentName, agentEmail;
     private CircleImageView agentImage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,7 +90,6 @@ public class AgentMenu extends AppCompatActivity
         final String uid = user.getUid();
         email = user.getEmail();
         Log.d("email",""+email);
-
 
         mAuth = FirebaseAuth.getInstance();
         authListener = new FirebaseAuth.AuthStateListener() {
@@ -184,27 +182,6 @@ public class AgentMenu extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -214,9 +191,13 @@ public class AgentMenu extends AppCompatActivity
 
          if (id == R.id.nav_add_farmers) {
              Intent landingPage = new Intent(AgentMenu.this,AddFarmers.class);
+             landingPage.putExtra("latitude",latitude);
+             landingPage.putExtra("longitude",longitude);
              startActivity(landingPage);
 
         } else if (id == R.id.nav_view_farmers) {
+             Intent viewFarmers = new Intent(AgentMenu.this,ViewFarmers.class);
+             startActivity(viewFarmers);
 
         } else if (id == R.id.nav_change_password) {
 
@@ -233,6 +214,8 @@ public class AgentMenu extends AppCompatActivity
             startActivity(landingPage);
             finish();
         } else if (id == R.id.nav_report_activities) {
+             Intent reportActivities = new Intent(AgentMenu.this,ReportFarming.class);
+             startActivity(reportActivities);
 
         }
 

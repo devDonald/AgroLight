@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import smtagro.donald.com.Agents.ViewFarmers;
 import smtagro.donald.com.LandingPage;
 import smtagro.donald.com.R;
 
@@ -68,7 +69,8 @@ public class AdminMenu extends AppCompatActivity {
         viewFarmers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent viewFarmers = new Intent(AdminMenu.this,ViewFarmers.class);
+                startActivity(viewFarmers);
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {
