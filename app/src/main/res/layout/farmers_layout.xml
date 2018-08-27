@@ -26,7 +26,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_agent_name"
+                android:id="@+id/tv_farmers_name"
                 />
 
         </LinearLayout>
@@ -46,7 +46,7 @@
                 android:layout_marginLeft="18dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_agent_phone"
+                android:id="@+id/tv_farmers_phone"
                 />
         </LinearLayout>
         <LinearLayout
@@ -65,7 +65,7 @@
                 android:layout_marginLeft="22dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_agent_address"
+                android:id="@+id/tv_farmer_address"
                 />
         </LinearLayout>
         <LinearLayout
@@ -79,12 +79,12 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agent LGA:  "/>
+                android:text="Farmer LGA:  "/>
             <TextView
                 android:layout_marginLeft="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_agent_lga"
+                android:id="@+id/tv_farmer_lga"
                 />
         </LinearLayout>
     <LinearLayout
@@ -98,12 +98,12 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Agent Id:  "/>
+            android:text=" FIN:  "/>
         <TextView
             android:layout_marginLeft="14dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tv_agent_id"
+            android:id="@+id/tv_farmer_fin"
             />
     </LinearLayout>
 

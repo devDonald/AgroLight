@@ -39,7 +39,7 @@
         <activity
             android:name=".Agents.AgentMenu"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Admin.AdminMenu" />
         <activity android:name=".LandingPage">
             <intent-filter>
@@ -73,9 +73,9 @@
         <activity android:name=".ReportFarming" />
         <activity android:name=".Admin.AdminLogin" />
         <activity android:name=".Agents.AgentLogin" />
-        <activity android:name=".Intro">
-
-        </activity>
+        <activity android:name=".Intro" />
+        <activity android:name=".Admin.AgentDetails" />
+        <activity android:name=".Admin.FarmerDetails" />
     </application>
 
 </manifest>
