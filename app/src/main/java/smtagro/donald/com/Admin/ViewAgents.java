@@ -81,6 +81,10 @@ public class ViewAgents extends AppCompatActivity {
             TextView tv_id= mView.findViewById(R.id.tv_agent_id);
             tv_id.setText(id);
         }
+        public void setState(String state){
+            TextView tv_id= mView.findViewById(R.id.tv_agent_state);
+            tv_id.setText(state);
+        }
 
         private ViewAgentsHolder.ClickListener mClickListener;
 

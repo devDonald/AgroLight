@@ -18,6 +18,10 @@
             android:icon="@drawable/report"
             android:title="Report Farming Activities" />
         <item
+            android:id="@+id/nav_report_recovery"
+            android:icon="@drawable/report"
+            android:title="Report Recovery" />
+        <item
             android:id="@+id/nav_change_password"
             android:icon="@drawable/ic_password"
             android:title="Change Password" />

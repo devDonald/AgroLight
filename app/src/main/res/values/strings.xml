@@ -141,24 +141,45 @@
     <string name="label_lga">Local Government</string>
     <string name="search">Search Agent by First Name</string>
 
-    <string-array name="lgas">
-        <item>Select LGA</item>
-        <item>Barkin Ladi</item>
-        <item>Bassa</item>
-        <item>Bokkos</item>
-        <item>Jos-East</item>
-        <item>Jos-North</item>
-        <item>Jos-South</item>
-        <item>Kanke Kanam</item>
-        <item>Langtang North </item>
-        <item>Langtang South</item>
-        <item>Mangu</item>
-        <item>Mikang</item>
-        <item>Pankshin</item>
-        <item>Qua'an Pan</item>
-        <item>Ryom</item>
-        <item>Shendam</item>
-        <item>Wase</item>
+    <string-array name="soo">
+        <item>Select State</item>
+        <item> Abia</item>
+        <item> Adamawa</item>
+        <item>Akwa Ibom </item>
+        <item>Anambra </item>
+        <item> Bauchi</item>
+        <item> Bayelsa</item>
+        <item> Benue</item>
+        <item>  Borno</item>
+        <item> Cross River</item>
+        <item> Delta</item>
+        <item>  Ebonyi</item>
+        <item> Enugu</item>
+        <item>Edo </item>
+        <item>Ekiti </item>
+        <item>Gombe </item>
+        <item>Imo</item>
+        <item>Jigawa </item>
+        <item> Kaduna</item>
+        <item>Kano </item>
+        <item>Katsina </item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nasarawa</item>
+        <item>Niger</item>
+        <item>Ogun </item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers </item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe </item>
+        <item>Zamfara </item>
+        <item>FCT</item>
 
     </string-array>
 </resources>

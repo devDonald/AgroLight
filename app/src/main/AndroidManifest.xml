@@ -31,7 +31,7 @@
     <application
         android:name=".utils.MyApplicationClass"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/agro_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -39,29 +39,48 @@
         <activity
             android:name=".Agents.AgentMenu"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Admin.AdminMenu" />
-        <activity android:name=".LandingPage">
+        <activity
+            android:name=".Admin.AdminMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LandingPage"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Agents.AddFarmers"
-            android:label="Add Farmer"/>
-        <activity android:name=".Admin.AddAgents"
-            android:label="Add Agent"/>
-        <activity android:name=".Agents.ViewFarmers"
-            android:label="View Farmers"/>
-        <activity android:name=".Agents.ResetPassword"
-            android:label="Change Password"/>
-        <activity android:name=".Admin.ViewAgents"
-            android:label="View Agents"/>
-        <activity android:name=".Admin.SearchAgent"
-            android:label="Search Agent"/>
-        <activity android:name=".Admin.SearchFarmer"
-            android:label="Search Farmer"/>
+        <activity
+            android:name=".Agents.AddFarmers"
+            android:label="Add Farmer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AddAgents"
+            android:label="Add Agent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Agents.ViewFarmers"
+            android:label="View Farmers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Agents.ResetPassword"
+            android:label="Change Password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.ViewAgents"
+            android:label="AgroLight Agents"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.SearchAgent"
+            android:label="Search Agent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.SearchFarmer"
+            android:label="Search Farmer"
+            android:screenOrientation="portrait" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -76,15 +95,31 @@
 
         <activity
             android:name=".Admin.ShowFarms"
-            android:label="AgroLight Registered Farms" />
-        <activity android:name=".ReportFarming" />
-        <activity android:name=".Admin.AdminLogin" />
-        <activity android:name=".Agents.AgentLogin" />
+            android:label="AgroLight Registered Farms"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Agents.Farming"
+            android:label="Report Farming Activities"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Admin.AdminLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Agents.AgentLogin"
+            android:screenOrientation="portrait" />
         <activity android:name=".Intro" />
-        <activity android:name=".Admin.AgentDetails"
-            android:label="AgroLight Agent"/>
-        <activity android:name=".Admin.FarmerDetails"
-            android:label="AgroLight Farmer"/>
+        <activity
+            android:name=".Admin.AgentDetails"
+            android:label="AgroLight Agent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.FarmerDetails"
+            android:label="AgroLight Farmer"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Agents.Recovery"
+            android:label="Farm Produce Recovery"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>

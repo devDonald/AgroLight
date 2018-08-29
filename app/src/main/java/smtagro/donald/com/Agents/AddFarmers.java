@@ -35,20 +35,20 @@ public class AddFarmers extends AppCompatActivity {
     private StorageReference farmersStorage;
     private EditText mNames,mAge,mHouseHoldSize,mPhone,mCenterNo,mCenterName,mFarmSize;
     private EditText mDistanceToMarket,mAvgIncomeFarming,mAvgIncomeNonFarming,mMajorCrop,mBVN;
-    private EditText mMajorLivestock,mInputsAndQuant,mStorageCapacity,mMembership,mEnteredBy,bvn;
+    private EditText mMajorLivestock,mMembership,mEnteredBy,bvn,mLga;
     private ImageView mfarmerImage;
-    private Spinner mMaritalStatus,mGender,mLga;
+    private Spinner mMaritalStatus,mGender,mState;
     private Button btSubmitFarmer;
     private static final int CAMERA_REQUEST_CODE1 = 1;
     private KProgressHUD hud;
     private String names,gender, age,lga,marital_status, farm_size, household_size;
     private String phone_number, avg_income_non_farming, avg_income_farming, distance_to_market;
-    private String produce_storage_capacity;
     private String cooperative_membership, center_number,center_name, major_crops;
     private String major_livestock;
-    private String inputs_and_quantities;
+    private String firstName,lastName,state;
+    private Double longitude,latitude;
     private String agentName,fBvn;
-    private String FIN,id;
+    private String FIN,id,agentID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,14 +70,13 @@ public class AddFarmers extends AppCompatActivity {
         mMajorCrop = findViewById(R.id.major_crops1);
         mBVN = findViewById(R.id.bvn1);
         mMajorLivestock = findViewById(R.id.major_livestock1);
-        mInputsAndQuant = findViewById(R.id.inputs_and_quantities1);
-        mStorageCapacity = findViewById(R.id.produce_storage_capacity1);
         mMembership = findViewById(R.id.cooperative_membership1);
         mEnteredBy = findViewById(R.id.etEnteredBy1);
         mfarmerImage = findViewById(R.id.farmer_image_snap);
         mMaritalStatus = findViewById(R.id.marital_status1);
         mGender = findViewById(R.id.gender1);
-        mLga = findViewById(R.id.sp_lga);
+        mState = findViewById(R.id.sp_lga);
+        mLga = findViewById(R.id.etLGA1);
 
         btSubmitFarmer = findViewById(R.id.btnRegister1);
 
@@ -92,6 +91,18 @@ public class AddFarmers extends AppCompatActivity {
                 .setAutoDismiss(true);
         FIN = getFIN(new SecureRandom(),15);
         Log.d("fin",""+FIN);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        if (bundle != null) {
+             firstName= bundle.getString("firstName");
+            lastName = bundle.getString("lastName");
+            latitude = bundle.getDouble("latitude");
+            longitude = bundle.getDouble("longitude");
+            agentID = bundle.getString("agentID");
+            mEnteredBy.setText(firstName+" "+lastName);
+        }
+
 
 
         mfarmerImage.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +121,7 @@ public class AddFarmers extends AppCompatActivity {
 
                 names=mNames.getText().toString().trim();
                 gender =mGender.getItemAtPosition(mGender.getSelectedItemPosition()).toString();
-                lga=mLga.getItemAtPosition(mLga.getSelectedItemPosition()).toString();
+                state=mState.getItemAtPosition(mState.getSelectedItemPosition()).toString();
                 age = mAge.getText().toString().trim();
                 marital_status = mMaritalStatus.getItemAtPosition(mMaritalStatus.getSelectedItemPosition())
                         .toString();
@@ -120,15 +131,14 @@ public class AddFarmers extends AppCompatActivity {
                 avg_income_farming = mAvgIncomeFarming.getText().toString().trim();
                 avg_income_non_farming = mAvgIncomeNonFarming.getText().toString().trim();
                 distance_to_market = mDistanceToMarket.getText().toString().trim();
-                produce_storage_capacity = mStorageCapacity.getText().toString().trim();
                 cooperative_membership=mMembership.getText().toString().trim();
                 center_name = mCenterName.getText().toString().trim();
                 center_number = mCenterNo.getText().toString().trim();
                 major_crops = mMajorCrop.getText().toString().trim();
                 fBvn = mBVN.getText().toString().trim();
                 agentName = mEnteredBy.getText().toString().trim();
-                inputs_and_quantities = mInputsAndQuant.getText().toString().trim();
                 major_livestock = mMajorLivestock.getText().toString().trim();
+                lga = mLga.getText().toString().trim();
 
                 if (TextUtils.isEmpty(names)){
                     mNames.setError("fill names");
@@ -154,15 +164,15 @@ public class AddFarmers extends AppCompatActivity {
                     mBVN.setError("fill BVN");
                 } else if (TextUtils.isEmpty(agentName)){
                     mEnteredBy.setError("fill Agent name");
-                } else if (TextUtils.isEmpty(inputs_and_quantities)){
-                    mInputsAndQuant.setError("enter inputs and quantities");
+                } else if (TextUtils.isEmpty(lga)){
+                    mLga.setError("fill Local govenment");
                 } else if (TextUtils.isEmpty(major_livestock)){
                     mMajorLivestock.setError("enter major lifestock");
                 } else if (gender.matches("Gender")){
                     MDToast.makeText(getApplication(),"Select valid gender",
                             MDToast.LENGTH_LONG, MDToast.TYPE_ERROR).show();
-                } else if (lga.matches("Select LGA")){
-                    MDToast.makeText(getApplication(),"Select valid LGA",
+                } else if (state.matches("Select State")){
+                    MDToast.makeText(getApplication(),"Select valid State",
                             MDToast.LENGTH_LONG, MDToast.TYPE_ERROR).show();
                 }else if (marital_status.matches("Marital Status")){
                     MDToast.makeText(getApplication(),"Select valid marital status",
@@ -207,13 +217,14 @@ public class AddFarmers extends AppCompatActivity {
                     Uri downloadURI = taskSnapshot.getDownloadUrl();
 
                     id = farmersDatabase.push().getKey();
-                    FarmersModel model = new FarmersModel(names,gender,age,lga,marital_status,farm_size,household_size,
-                            phone_number,avg_income_non_farming,avg_income_farming,distance_to_market,produce_storage_capacity,
-                            cooperative_membership,center_number,center_name,major_crops,major_livestock,inputs_and_quantities,
-                            fBvn,agentName,FIN,downloadURI.toString());
+                    FarmersModel model = new FarmersModel(names,gender,age,lga,state,marital_status,farm_size,household_size,
+                            phone_number,avg_income_non_farming,avg_income_farming,distance_to_market,
+                            cooperative_membership,center_number,center_name,major_crops,major_livestock,
+                            fBvn,agentName,longitude,latitude,FIN,downloadURI.toString());
 
 
                     farmersDatabase.child(id).setValue(model);
+                    farmersDatabase.child(id).child("agentID").setValue(agentID);
                     hud.dismiss();
                     MDToast.makeText(getApplication(),"Farmer Added Successfully",
                             MDToast.LENGTH_LONG, MDToast.TYPE_SUCCESS).show();

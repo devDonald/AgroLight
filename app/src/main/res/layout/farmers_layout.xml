@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
     app:cardElevation="8dp">
 
     <LinearLayout
@@ -60,6 +61,25 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Farmer's State: "/>
+            <TextView
+                android:layout_marginLeft="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_farmer_state"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/lite_blue"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Center Name: "/>
             <TextView
                 android:layout_marginLeft="22dp"
@@ -79,7 +99,7 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Farmer LGA:  "/>
+                android:text="Farmer's LGA:  "/>
             <TextView
                 android:layout_marginLeft="0dp"
                 android:layout_width="wrap_content"
@@ -98,7 +118,7 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" FIN:  "/>
+            android:text="FIN:  "/>
         <TextView
             android:layout_marginLeft="14dp"
             android:layout_width="wrap_content"

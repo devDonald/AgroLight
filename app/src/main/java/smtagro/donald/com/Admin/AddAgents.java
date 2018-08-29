@@ -32,14 +32,14 @@ import smtagro.donald.com.models.AgentModel;
 
 public class AddAgents extends AppCompatActivity {
     private ImageView addAgentImage;
-    private EditText etFirst,etLast,etPhone,etEmail,etAddress;
+    private EditText etFirst,etLast,etPhone,etEmail,etAddress,mLga;
     private Button btSubmit;
-    private Spinner lga;
+    private Spinner mState;
     private DatabaseReference agentsDatabase;
     private FirebaseAuth mAuth;
     private StorageReference agentsStorage;
     private FirebaseUser mUser;
-    private String uID,id,firstName,lastName,phone,email,address,lgas;
+    private String uID,id,firstName,lastName,phone,email,address,lgas,state;
     private static final int CAMERA_REQUEST_CODE = 1;
     private int CAMERA_PERMISSION_CODE = 24;
     private KProgressHUD hud;
@@ -76,7 +76,9 @@ public class AddAgents extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etAddress = findViewById(R.id.etAddress);
         btSubmit = findViewById(R.id.btnSubmitAgent);
-        lga = findViewById(R.id.sp_lgaa);
+        mState = findViewById(R.id.sp_lgaa);
+        mLga = findViewById(R.id.et_agent_lga);
+
 
         addAgentImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +99,8 @@ public class AddAgents extends AppCompatActivity {
                 phone = etPhone.getText().toString().trim();
                 email = etEmail.getText().toString().trim();
                 address = etAddress.getText().toString().trim();
-                lgas=lga.getItemAtPosition(lga.getSelectedItemPosition()).toString();
+                lgas = mLga.getText().toString().trim();
+                state=mState.getItemAtPosition(mState.getSelectedItemPosition()).toString();
 
                 if (TextUtils.isEmpty(firstName)){
                     etFirst.setError("input first name");
@@ -107,10 +110,12 @@ public class AddAgents extends AppCompatActivity {
                     etPhone.setError("input phone");
                 }else if (TextUtils.isEmpty(email)){
                     etEmail.setError("input email");
-                }else if (TextUtils.isEmpty(address)){
+                }else if (TextUtils.isEmpty(lgas)){
+                    mLga.setError("input LGA");
+                } else if (TextUtils.isEmpty(address)){
                     etAddress.setError("input address");
-                } else if (lgas.matches("Select LGA")){
-                    MDToast.makeText(getApplication(),"Select a valid lga",
+                }else if (state.matches("Select State")){
+                    MDToast.makeText(getApplication(),"Select a valid State",
                             MDToast.LENGTH_LONG, MDToast.TYPE_ERROR).show();
                 }else{
                     addAgent();
@@ -153,7 +158,7 @@ public class AddAgents extends AppCompatActivity {
 
                     id = agentsDatabase.push().getKey();
                     AgentModel model = new AgentModel(id,firstName,lastName,phone,email,
-                            address,lgas,downloadURI.toString());
+                            address,state,lgas,downloadURI.toString());
                     agentsDatabase.child(id).setValue(model);
                     hud.dismiss();
                     MDToast.makeText(getApplication(),"Agent Added Successfully",

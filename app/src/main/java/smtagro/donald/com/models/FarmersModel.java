@@ -4,7 +4,7 @@ package smtagro.donald.com.models;
 public class FarmersModel {
     private String names;
     private String gender;
-    private String age,lga;
+    private String age,lga,state;
     private String marital_status;
     private String farm_size;
     private String household_size;
@@ -12,13 +12,13 @@ public class FarmersModel {
     private String avg_income_non_farming;
     private String avg_income_farming;
     private String distance_to_market;
-    private String produce_storage_capacity;
+    private Double latitude;
     private String cooperative_membership;
     private String center_number;
     private String center_name;
     private String major_crops;
     private String major_livestock;
-    private String inputs_and_quantities;
+    private Double longitude;
     private String bvn,agentName;
     private String FIN;
     private String farmerImage;
@@ -27,18 +27,18 @@ public class FarmersModel {
 
     }
 
-    public FarmersModel(String names, String gender, String age, String lga,
+    public FarmersModel(String names, String gender, String age, String lga,String state,
                         String marital_status, String farm_size, String household_size,
                         String phone_number, String avg_income_non_farming,
                         String avg_income_farming, String distance_to_market,
-                        String produce_storage_capacity, String cooperative_membership,
-                        String center_number, String center_name, String major_crops,
-                        String major_livestock, String inputs_and_quantities, String bvn,
-                        String agentName, String FIN, String farmerImage) {
+                        String cooperative_membership,String center_number, String center_name,
+                        String major_crops, String major_livestock, String bvn, String agentName,
+                        Double longitude, Double latitude, String FIN, String farmerImage) {
         this.names = names;
         this.gender = gender;
         this.age = age;
         this.lga = lga;
+        this.state =state;
         this.marital_status = marital_status;
         this.farm_size = farm_size;
         this.household_size = household_size;
@@ -46,15 +46,15 @@ public class FarmersModel {
         this.avg_income_non_farming = avg_income_non_farming;
         this.avg_income_farming = avg_income_farming;
         this.distance_to_market = distance_to_market;
-        this.produce_storage_capacity = produce_storage_capacity;
         this.cooperative_membership = cooperative_membership;
         this.center_number = center_number;
         this.center_name = center_name;
         this.major_crops = major_crops;
         this.major_livestock = major_livestock;
-        this.inputs_and_quantities = inputs_and_quantities;
         this.bvn = bvn;
         this.agentName = agentName;
+        this.longitude = longitude;
+        this.latitude =latitude;
         this.FIN = FIN;
         this.farmerImage = farmerImage;
     }
@@ -89,6 +89,14 @@ public class FarmersModel {
 
     public void setLga(String lga) {
         this.lga = lga;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getMarital_status() {
@@ -147,13 +155,6 @@ public class FarmersModel {
         this.distance_to_market = distance_to_market;
     }
 
-    public String getProduce_storage_capacity() {
-        return produce_storage_capacity;
-    }
-
-    public void setProduce_storage_capacity(String produce_storage_capacity) {
-        this.produce_storage_capacity = produce_storage_capacity;
-    }
 
     public String getCooperative_membership() {
         return cooperative_membership;
@@ -195,14 +196,6 @@ public class FarmersModel {
         this.major_livestock = major_livestock;
     }
 
-    public String getInputs_and_quantities() {
-        return inputs_and_quantities;
-    }
-
-    public void setInputs_and_quantities(String inputs_and_quantities) {
-        this.inputs_and_quantities = inputs_and_quantities;
-    }
-
     public String getBvn() {
         return bvn;
     }
@@ -217,6 +210,22 @@ public class FarmersModel {
 
     public void setAgentName(String agentName) {
         this.agentName = agentName;
+    }
+
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     public String getFIN() {

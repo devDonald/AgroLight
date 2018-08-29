@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Agents.AddFarmers">
@@ -175,7 +176,17 @@
                             android:layout_weight="100"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
-                            android:entries="@array/lgas" />
+                            android:entries="@array/soo" />
+                        <EditText
+                            android:id="@+id/etLGA1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_lga"/>
+
 
                         <EditText
                             android:id="@+id/etCenterNum1"
@@ -357,34 +368,6 @@
                         android:rotation="180"
                         android:background="@android:color/holo_green_light"/>
 
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp">
-
-                        <EditText
-                            android:id="@+id/inputs_and_quantities1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="50"
-                            android:background="@drawable/border"
-                            android:layout_margin="5dp"
-                            android:inputType="text"
-                            android:hint="@string/label_inputs_and_quantities"/>
-
-                        <EditText
-                            android:id="@+id/produce_storage_capacity1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="50"
-                            android:background="@drawable/border"
-                            android:layout_margin="5dp"
-                            android:inputType="text"
-                            android:hint="@string/label_produce_storage_capacity"/>
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:orientation="vertical"

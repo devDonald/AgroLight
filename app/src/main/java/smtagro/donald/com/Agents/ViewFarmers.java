@@ -78,6 +78,11 @@ public class ViewFarmers extends AppCompatActivity {
             tv_id.setText(fin);
         }
 
+        public void setState(String state){
+            TextView tv_id= mView.findViewById(R.id.tv_farmer_state);
+            tv_id.setText(state);
+        }
+
         private ViewFarmerHolder.ClickListener mClickListener;
 
         public interface ClickListener{
@@ -107,6 +112,7 @@ public class ViewFarmers extends AppCompatActivity {
                 viewHolder.setLocation(model.getLga());
                 viewHolder.setAddress(model.getCenter_name());
                 viewHolder.setFin(model.getFIN());
+                viewHolder.setState(model.getState());
             }
 
             @Override

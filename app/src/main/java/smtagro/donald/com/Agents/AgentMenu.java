@@ -42,7 +42,6 @@ import com.squareup.picasso.Picasso;
 import de.hdodenhof.circleimageview.CircleImageView;
 import smtagro.donald.com.LandingPage;
 import smtagro.donald.com.R;
-import smtagro.donald.com.ReportFarming;
 import smtagro.donald.com.models.AgentModel;
 
 public class AgentMenu extends AppCompatActivity
@@ -70,7 +69,7 @@ public class AgentMenu extends AppCompatActivity
     private int LOCATION_PERMISSION_CODE = 130;
     //Bundle data
     private Location location;
-    private String lName, id, fName, email,image,onlineEmail;
+    private String lName, agentID, fName, email,image,onlineEmail;
     private double latitude, longitude;
     private FirebaseAuth.AuthStateListener authListener;
     private DatabaseReference agentRef;
@@ -148,6 +147,7 @@ public class AgentMenu extends AppCompatActivity
                             fName=model.getfName();
                             Log.d("fname",""+fName);
 
+                            agentID =model.getAgentId();
                             lName=model.getlName();
                             Log.d("lname",""+lName);
 
@@ -193,6 +193,9 @@ public class AgentMenu extends AppCompatActivity
              Intent landingPage = new Intent(AgentMenu.this,AddFarmers.class);
              landingPage.putExtra("latitude",latitude);
              landingPage.putExtra("longitude",longitude);
+             landingPage.putExtra("firstName",fName);
+             landingPage.putExtra("lastName",lName);
+             landingPage.putExtra("agentID",agentID);
              startActivity(landingPage);
 
         } else if (id == R.id.nav_view_farmers) {
@@ -214,10 +217,19 @@ public class AgentMenu extends AppCompatActivity
             startActivity(landingPage);
             finish();
         } else if (id == R.id.nav_report_activities) {
-             Intent reportActivities = new Intent(AgentMenu.this,ReportFarming.class);
+             Intent reportActivities = new Intent(AgentMenu.this,Farming.class);
+             reportActivities.putExtra("firstName",fName);
+             reportActivities.putExtra("lastName",lName);
+             reportActivities.putExtra("agentID",agentID);
              startActivity(reportActivities);
 
-        }
+        } else if (id==R.id.nav_report_recovery){
+             Intent reportRecovery = new Intent(AgentMenu.this,Recovery.class);
+             reportRecovery.putExtra("firstName",fName);
+             reportRecovery.putExtra("lastName",lName);
+             reportRecovery.putExtra("agentID",agentID);
+             startActivity(reportRecovery);
+         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -240,7 +252,7 @@ public class AgentMenu extends AppCompatActivity
             latLng = new LatLng(location.getLatitude(), location.getLongitude());
         }
 // Add a marker in Sydney and move the camera
-        mMap.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Farm Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         if (mMap.getCameraPosition().zoom <= 9) {
             CameraUpdate update = CameraUpdateFactory.newLatLngZoom(latLng, 15);
@@ -304,6 +316,7 @@ public class AgentMenu extends AppCompatActivity
             if (mLocation != null) {
                 latitude = mLocation.getLatitude();
                 longitude = mLocation.getLongitude();
+                Log.d("longitude",""+longitude);
                 LatLng latLng = new LatLng(latitude, longitude);
                 if (mMap != null) {
                     mMap.clear();
