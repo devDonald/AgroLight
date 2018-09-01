@@ -112,6 +112,7 @@ public class ViewAgents extends AppCompatActivity {
             protected void populateViewHolder(ViewAgentsHolder viewHolder,AgentModel model, int position) {
                 viewHolder.setName(model.getfName(),model.getlName());
                 viewHolder.setPhone(model.getPhone());
+                viewHolder.setState(model.getState());
                 viewHolder.setLocation(model.getLga());
                 viewHolder.setAddress(model.getAddress());
                 viewHolder.setId(model.getAgentId());

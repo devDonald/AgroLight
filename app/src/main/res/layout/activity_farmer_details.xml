@@ -4,6 +4,461 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Admin.FarmerDetails">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+
+                card_view:cardElevation="@dimen/cardElevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="6dp"
+                    android:orientation="vertical">
+
+                    <TextView style="@style/Categories"
+                        android:id="@+id/label_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/personal_profile"
+                        android:layout_marginLeft="@dimen/text_margin"
+                        android:layout_marginRight="@dimen/text_margin"
+                        android:layout_marginTop="15dp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:rotation="180"
+                        android:background="@android:color/holo_green_light"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:id="@+id/farmer_detail_image"
+                            android:layout_width="200dp"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/ic_username"
+                            />
+
+                        <TextView
+                            android:id="@+id/farmer_detail_names"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:text="Full name" />
+
+                        <TextView
+                            android:id="@+id/farmer_detail_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="120"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_age"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_bvn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="120"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_bvn"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_FIN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="120"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/fin"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_houseSize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="120"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/fin"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/farmer_detail_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_phone_number"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <TextView
+                            android:id="@+id/farmer_detail_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_gender"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_marital"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_marital_status"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="stae"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/farmer_detail_qual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/qualification"/>
+
+
+                        <TextView
+                            android:id="@+id/farmer_detail_lga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_lga"/>
+
+
+                        <TextView
+                            android:id="@+id/farmer_detail_ward"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_ward"/>
+
+
+                        <TextView
+                            android:id="@+id/farmer_detail_village"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_village"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_identification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_mode"/>
+                        <LinearLayout
+                            android:background="@drawable/border"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:background="@drawable/border"
+                                android:layout_margin="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Id Card: "/>
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/farmer_detail_id_image"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvFarm"
+                android:layout_below="@+id/profile"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/cardElevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:elevation="6dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:rotation="180"
+                        android:background="@android:color/holo_green_light"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/farmer_detail_farmer_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_farmer_type"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_farmsize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_farm_size"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_distance_market"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_dist_to_market"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_avg_income_farming"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_avg_income_farming"/>
+                        <TextView
+                            android:id="@+id/farmer_detail_avg_incomeN_farming"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_avg_income_non_farming"/>
+                        <TextView
+                            android:id="@+id/detail_farmer_farm_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_farm_location"/>
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/farmer_detail_major_crops"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_major_crops"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/lite_blue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:text="Farm Coordinates"
+                            android:hint="@string/label_major_crops"/>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:background="@drawable/border"
+                                android:layout_margin="5dp"
+                                android:id="@+id/farmer_detail_latitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:background="@drawable/border"
+                                android:layout_margin="5dp"
+                                android:id="@+id/farmer_detail_longitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvFinance"
+                android:layout_below="@+id/cvFarm"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@android:color/white"
+                card_view:cardElevation="@dimen/cardElevation">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:elevation="6dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:rotation="180"
+                        android:background="@android:color/holo_green_light"/>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/farmer_detail_membership"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_cooperative_membership"/>
+
+                        <TextView
+                            android:id="@+id/farmer_detail_corp_loc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_cooperative_loc"/>
+
+
+                        <TextView
+                            android:id="@+id/farmer_detail_agent_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="Agent_name"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

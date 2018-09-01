@@ -1,23 +1,23 @@
 package smtagro.donald.com.models;
 
 public class RecoveryModel {
-    private String FIN,agentID,dateOfHervest,noOfHectares,offTakeDate;
-    private String offTakeCenter,reportDate,farmerName,typeOfCrop,agentName;
+    private String FIN,agentID,dateOfHervest,noOfHectares,offTakeDate,tractorSize;
+    private String offTakeCenter,farmerName,typeOfCrop,agentName;
 
     public RecoveryModel() {
     }
 
     public RecoveryModel(String FIN, String agentID, String dateOfHervest,
-                         String noOfHectares, String offTakeDate, String offTakeCenter,
-                         String reportDate,
-                         String farmerName, String typeOfCrop, String agentName) {
+                         String noOfHectares, String offTakeDate, String tractorSize,
+                         String offTakeCenter, String farmerName,
+                         String typeOfCrop, String agentName) {
         this.FIN = FIN;
         this.agentID = agentID;
         this.dateOfHervest = dateOfHervest;
         this.noOfHectares = noOfHectares;
         this.offTakeDate = offTakeDate;
+        this.tractorSize = tractorSize;
         this.offTakeCenter = offTakeCenter;
-        this.reportDate = reportDate;
         this.farmerName = farmerName;
         this.typeOfCrop = typeOfCrop;
         this.agentName = agentName;
@@ -63,20 +63,20 @@ public class RecoveryModel {
         this.offTakeDate = offTakeDate;
     }
 
+    public String getTractorSize() {
+        return tractorSize;
+    }
+
+    public void setTractorSize(String tractorSize) {
+        this.tractorSize = tractorSize;
+    }
+
     public String getOffTakeCenter() {
         return offTakeCenter;
     }
 
     public void setOffTakeCenter(String offTakeCenter) {
         this.offTakeCenter = offTakeCenter;
-    }
-
-    public String getReportDate() {
-        return reportDate;
-    }
-
-    public void setReportDate(String reportDate) {
-        this.reportDate = reportDate;
     }
 
     public String getFarmerName() {

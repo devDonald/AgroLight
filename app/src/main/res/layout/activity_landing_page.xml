@@ -34,7 +34,7 @@
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/agro_logo"/>
+                    android:src="@drawable/agro"/>
 
 
                 <Button

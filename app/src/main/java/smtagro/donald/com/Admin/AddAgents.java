@@ -140,7 +140,7 @@ public class AddAgents extends AppCompatActivity {
 
     public void addAgent(){
         hud.show();
-        StorageReference mountainsRef = agentsStorage.child(email).child("image.jpg");
+        StorageReference mountainsRef = agentsStorage.child(phone).child("image.jpg");
         if (addAgentImage!=null) {
 
             addAgentImage.setDrawingCacheEnabled(true);

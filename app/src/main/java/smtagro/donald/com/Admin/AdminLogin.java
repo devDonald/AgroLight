@@ -79,7 +79,7 @@ public class AdminLogin extends AppCompatActivity {
 
                                     } else{
                                         MDToast.makeText(getApplicationContext(),"Login unsuccessful",
-                                                MDToast.LENGTH_LONG,MDToast.TYPE_SUCCESS).show();
+                                                MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
 
                                     }
 

@@ -40,7 +40,7 @@
                         android:id="@+id/label_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/category_profile"
+                        android:text="@string/personal_profile"
                         android:layout_marginLeft="@dimen/text_margin"
                         android:layout_marginRight="@dimen/text_margin"
                         android:layout_marginTop="15dp" />
@@ -78,6 +78,7 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="textPersonName"
+                            android:imeOptions="actionNext"
                             android:hint="Full name" />
 
                         <EditText
@@ -88,6 +89,7 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="number"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_age"/>
                         <EditText
                             android:id="@+id/bvn1"
@@ -97,6 +99,7 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="number"
+                            android:imeOptions="actionNext"
                             android:maxLength="11"
                             android:hint="@string/label_bvn"/>
 
@@ -116,6 +119,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="100"
                             android:inputType="number"
+                            android:imeOptions="actionNext"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:hint="@string/label_household"/>
@@ -129,6 +133,7 @@
                             android:layout_margin="5dp"
                             android:inputType="phone"
                             android:maxLength="11"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_phone_number"/>
 
                     </LinearLayout>
@@ -178,6 +183,18 @@
                             android:layout_margin="5dp"
                             android:entries="@array/soo" />
                         <EditText
+                            android:id="@+id/etQualification1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:hint="@string/qualification"/>
+
+
+                        <EditText
                             android:id="@+id/etLGA1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -189,25 +206,56 @@
 
 
                         <EditText
-                            android:id="@+id/etCenterNum1"
+                            android:id="@+id/etWard1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="100"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="text"
-                            android:hint="@string/label_center_number"/>
+                            android:imeOptions="actionNext"
+                            android:hint="@string/label_ward"/>
 
 
                         <EditText
-                            android:id="@+id/etCenterName1"
+                            android:id="@+id/etVillage1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="70"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="text"
-                            android:hint="@string/label_center_name"/>
+                            android:imeOptions="actionNext"
+                            android:hint="@string/label_village"/>
+
+
+
+                        <EditText
+                            android:id="@+id/etModeOfIdent1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="70"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
+                            android:hint="@string/label_mode"/>
+                       <LinearLayout
+                           android:orientation="horizontal"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+                           <Button
+                               android:drawableLeft="@drawable/ic_menu_camera"
+                               android:id="@+id/bt_mode_of_ident1"
+                               android:layout_width="wrap_content"
+                               android:layout_height="40dp"
+                               android:text="Snap ID Card"/>
+                           <ImageView
+                               android:id="@+id/display_idcard"
+                               android:layout_width="100dp"
+                               android:layout_height="50dp" />
+
+                       </LinearLayout>
 
                     </LinearLayout>
 
@@ -254,6 +302,16 @@
                         android:layout_marginRight="10dp">
 
                         <EditText
+                            android:imeOptions="actionNext"
+                            android:id="@+id/new_or_existing1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="100"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:inputType="text"
+                            android:hint="@string/label_farmer_type"/>
+                        <EditText
                             android:id="@+id/farmsize1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -261,9 +319,22 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="number"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_farm_size"/>
+                        <EditText
+                            android:imeOptions="actionNext"
+                            android:id="@+id/farmLocation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_farm_location"/>
+
+
 
                         <EditText
+                            android:imeOptions="actionNext"
                             android:id="@+id/distance_to_market1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -288,7 +359,8 @@
                             android:layout_weight="50"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
-                            android:inputType="number"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_avg_income_farming"/>
 
                         <EditText
@@ -298,7 +370,8 @@
                             android:layout_weight="50"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
-                            android:inputType="number"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_avg_income_non_farming"/>
 
                     </LinearLayout>
@@ -318,6 +391,7 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="text"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_major_crops"/>
 
                         <EditText
@@ -327,6 +401,7 @@
                             android:layout_weight="50"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
+                            android:imeOptions="actionNext"
                             android:inputType="text"
                             android:hint="@string/label_major_livestock"/>
 
@@ -355,11 +430,12 @@
 
                     <TextView style="@style/Categories"
                         android:id="@+id/label_income_profile1"
-                        android:text="@string/income_details"
+                        android:text="@string/corp_details"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/text_margin"
                         android:layout_marginRight="@dimen/text_margin"
+                        android:imeOptions="actionNext"
                         android:layout_marginTop="@dimen/text_margin" />
 
                     <View
@@ -383,7 +459,18 @@
                             android:layout_weight="50"
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
+                            android:imeOptions="actionNext"
                             android:hint="@string/label_cooperative_membership"/>
+
+                        <EditText
+                            android:id="@+id/cooperative_location1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="50"
+                            android:background="@drawable/border"
+                            android:layout_margin="5dp"
+                            android:hint="@string/label_cooperative_loc"/>
+
 
                         <EditText
                             android:id="@+id/etEnteredBy1"
@@ -393,6 +480,7 @@
                             android:background="@drawable/border"
                             android:layout_margin="5dp"
                             android:inputType="text"
+                            android:imeOptions="actionDone"
                             android:hint="entered by"/>
 
                     </LinearLayout>

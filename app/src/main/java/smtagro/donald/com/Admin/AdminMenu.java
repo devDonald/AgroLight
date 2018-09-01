@@ -35,27 +35,24 @@ public class AdminMenu extends AppCompatActivity {
         showFarms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent showFarms = new Intent(AdminMenu.this,ShowFarms.class);
+                startActivity(showFarms);
             }
         });
 
         searchAgent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addAgent = new Intent(AdminMenu.this,SearchAgent.class);
-                startActivity(addAgent);
+                Intent searchAgent = new Intent(AdminMenu.this,SearchAgent.class);
+                startActivity(searchAgent);
             }
         });
         searchFarmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                searchAgent.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent searchFarmer = new Intent(AdminMenu.this,SearchFarmer.class);
-                        startActivity(searchFarmer);
-                    }
-                });
+
+                Intent searchFarmer = new Intent(AdminMenu.this,SearchFarmer.class);
+                startActivity(searchFarmer);
             }
         });
         addAgent.setOnClickListener(new View.OnClickListener() {
@@ -68,8 +65,8 @@ public class AdminMenu extends AppCompatActivity {
         viewAgents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addAgent = new Intent(AdminMenu.this,ViewAgents.class);
-                startActivity(addAgent);
+                Intent viewAgents = new Intent(AdminMenu.this,ViewAgents.class);
+                startActivity(viewAgents);
             }
         });
         viewFarmers.setOnClickListener(new View.OnClickListener() {

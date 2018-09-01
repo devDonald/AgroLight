@@ -28,11 +28,11 @@
     <string name="label_marital_status">Marital Status:</string>
     <string name="label_household">House-Hold Size:</string>
     <string name="label_phone_number">Phone Number:</string>
-    <string name="label_farm_size">Farm Size:</string>
-    <string name="label_avg_income_non_farming">Avg. Income From Non Farming:</string>
+    <string name="label_farm_size">Farm Size(Hectares):</string>
+    <string name="label_avg_income_non_farming">Avg. Income From Non Farming(Naira):</string>
     <string name="label_dry_season_business">Dry Season Business:</string>
-    <string name="label_avg_income_farming">Avg Income From Farming:</string>
-    <string name="label_dist_to_market">Distance To Market:</string>
+    <string name="label_avg_income_farming">Avg Income From Farming(Naira):</string>
+    <string name="label_dist_to_market">Distance To Market(KM):</string>
     <string name="label_produce_storage_capacity">Produce Storage Capacity:</string>
     <string name="label_cooperative_membership">Cooperative Memebership:</string>
     <string name="label_center_number">Center Number:</string>
@@ -140,6 +140,16 @@
     <string name="admin_view_farmers">View All Farmers</string>
     <string name="label_lga">Local Government</string>
     <string name="search">Search Agent by First Name</string>
+    <string name="label_ward">Federal Ward</string>
+    <string name="label_village">Village</string>
+    <string name="label_mode">Mode of Identification</string>
+    <string name="qualification">Highest Qualification</string>
+    <string name="label_cooperative_loc">Location of Cooperative</string>
+    <string name="label_farm_location">Farm Location</string>
+    <string name="corp_details">Cooperative Details</string>
+    <string name="personal_profile">Personal Details</string>
+    <string name="label_farmer_type">New or Existing Farmer</string>
+    <string name="fin">FIN</string>
 
     <string-array name="soo">
         <item>Select State</item>

@@ -54,6 +54,8 @@
                             android:layout_marginLeft="10dp">
 
                             <EditText
+                                android:imeOptions="actionNext"
+                                android:maxLength="15"
                                 android:id="@+id/recovery_farmerId"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -86,10 +88,12 @@
                             android:layout_marginLeft="10dp">
 
                             <EditText
+                                android:imeOptions="actionNext"
                                 android:id="@+id/recovery_farmer_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_margin="5dp"
+                                android:inputType="textCapWords"
                                 android:background="@android:color/transparent"
                                 android:hint="Farmer's Name"/>
 
@@ -119,6 +123,7 @@
                             android:layout_marginLeft="10dp">
 
                             <EditText
+                                android:imeOptions="actionNext"
                                 android:id="@+id/recovery_agentId"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -140,15 +145,18 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:imeOptions="actionNext"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Hervest Report"
+                            android:text="Harvest Report"
                             android:gravity="center"
                             android:layout_margin="10dp"
+                            android:inputType="textCapSentences"
                             android:textStyle="bold"
                             android:textSize="20sp"/>
 
                         <EditText
+                            android:imeOptions="actionNext"
                             android:hint="Number of hectares "
                             android:id="@+id/recovery_no_hectares"
                             android:layout_width="match_parent"
@@ -162,12 +170,11 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <EditText
+                        <Button
                             android:hint="Date of Hervest"
                             android:id="@+id/recovery_date_of_hervest"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"
                             android:background="@drawable/border"/>
                     </LinearLayout>
                     <LinearLayout
@@ -190,12 +197,11 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <EditText
+                        <Button
                             android:hint="Date of Off-Taking"
                             android:id="@+id/recovery_date_of_offtake"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"
                             android:background="@drawable/border"/>
                     </LinearLayout>
                     <LinearLayout
@@ -206,6 +212,7 @@
 
 
                         <EditText
+                            android:imeOptions="actionNext"
                             android:hint="Off-Taking Center"
                             android:id="@+id/recovery_offtake_center"
                             android:layout_width="match_parent"

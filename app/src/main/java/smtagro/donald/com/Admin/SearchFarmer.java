@@ -108,7 +108,7 @@ public class SearchFarmer extends AppCompatActivity {
 
     public void showFarmer(String searchText){
 
-        Query firebaseSearchQuery = farmerDatabase.orderByChild("names").startAt(searchText).endAt(searchText + "\uf8ff");
+        Query firebaseSearchQuery = farmerDatabase.orderByChild("fin").startAt(searchText).endAt(searchText + "\uf8ff");
         firebaseRecyclerAdapter= new FirebaseRecyclerAdapter<FarmersModel, SearchHolder>(
                 FarmersModel.class,
                 R.layout.farmers_layout,
@@ -121,7 +121,7 @@ public class SearchFarmer extends AppCompatActivity {
                 viewHolder.setName(model.getNames());
                 viewHolder.setPhone(model.getPhone_number());
                 viewHolder.setLocation(model.getLga());
-                viewHolder.setAddress(model.getCenter_name());
+                viewHolder.setAddress(model.getFarmLocation());
                 viewHolder.setFin(model.getFIN());
                 viewHolder.setState(model.getState());
             }

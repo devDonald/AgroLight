@@ -13,10 +13,10 @@ public class FarmersModel {
     private String avg_income_farming;
     private String distance_to_market;
     private Double latitude;
-    private String cooperative_membership;
-    private String center_number;
-    private String center_name;
-    private String major_crops;
+    private String cooperative_membership,cooperative_location;
+    private String federal_ward;
+    private String village,highestQualification,modeOfIdentification,identificationImage;
+    private String farmLocation,farmer_existance,major_crops;
     private String major_livestock;
     private Double longitude;
     private String bvn,agentName;
@@ -27,18 +27,21 @@ public class FarmersModel {
 
     }
 
-    public FarmersModel(String names, String gender, String age, String lga,String state,
+    public FarmersModel(String names, String gender, String age, String lga, String state,
                         String marital_status, String farm_size, String household_size,
                         String phone_number, String avg_income_non_farming,
-                        String avg_income_farming, String distance_to_market,
-                        String cooperative_membership,String center_number, String center_name,
-                        String major_crops, String major_livestock, String bvn, String agentName,
-                        Double longitude, Double latitude, String FIN, String farmerImage) {
+                        String avg_income_farming, String distance_to_market, Double latitude,
+                        String cooperative_membership, String cooperative_location,
+                        String federal_ward, String village, String highestQualification,
+                        String modeOfIdentification, String identificationImage,
+                        String farmLocation, String farmer_existance, String major_crops,
+                        String major_livestock, Double longitude, String bvn, String agentName,
+                        String FIN, String farmerImage) {
         this.names = names;
         this.gender = gender;
         this.age = age;
         this.lga = lga;
-        this.state =state;
+        this.state = state;
         this.marital_status = marital_status;
         this.farm_size = farm_size;
         this.household_size = household_size;
@@ -46,15 +49,21 @@ public class FarmersModel {
         this.avg_income_non_farming = avg_income_non_farming;
         this.avg_income_farming = avg_income_farming;
         this.distance_to_market = distance_to_market;
+        this.latitude = latitude;
         this.cooperative_membership = cooperative_membership;
-        this.center_number = center_number;
-        this.center_name = center_name;
+        this.cooperative_location = cooperative_location;
+        this.federal_ward = federal_ward;
+        this.village = village;
+        this.highestQualification = highestQualification;
+        this.modeOfIdentification = modeOfIdentification;
+        this.identificationImage = identificationImage;
+        this.farmLocation = farmLocation;
+        this.farmer_existance = farmer_existance;
         this.major_crops = major_crops;
         this.major_livestock = major_livestock;
+        this.longitude = longitude;
         this.bvn = bvn;
         this.agentName = agentName;
-        this.longitude = longitude;
-        this.latitude =latitude;
         this.FIN = FIN;
         this.farmerImage = farmerImage;
     }
@@ -155,6 +164,13 @@ public class FarmersModel {
         this.distance_to_market = distance_to_market;
     }
 
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
 
     public String getCooperative_membership() {
         return cooperative_membership;
@@ -164,20 +180,68 @@ public class FarmersModel {
         this.cooperative_membership = cooperative_membership;
     }
 
-    public String getCenter_number() {
-        return center_number;
+    public String getCooperative_location() {
+        return cooperative_location;
     }
 
-    public void setCenter_number(String center_number) {
-        this.center_number = center_number;
+    public void setCooperative_location(String cooperative_location) {
+        this.cooperative_location = cooperative_location;
     }
 
-    public String getCenter_name() {
-        return center_name;
+    public String getFederal_ward() {
+        return federal_ward;
     }
 
-    public void setCenter_name(String center_name) {
-        this.center_name = center_name;
+    public void setFederal_ward(String federal_ward) {
+        this.federal_ward = federal_ward;
+    }
+
+    public String getVillage() {
+        return village;
+    }
+
+    public void setVillage(String village) {
+        this.village = village;
+    }
+
+    public String getHighestQualification() {
+        return highestQualification;
+    }
+
+    public void setHighestQualification(String highestQualification) {
+        this.highestQualification = highestQualification;
+    }
+
+    public String getModeOfIdentification() {
+        return modeOfIdentification;
+    }
+
+    public void setModeOfIdentification(String modeOfIdentification) {
+        this.modeOfIdentification = modeOfIdentification;
+    }
+
+    public String getIdentificationImage() {
+        return identificationImage;
+    }
+
+    public void setIdentificationImage(String identificationImage) {
+        this.identificationImage = identificationImage;
+    }
+
+    public String getFarmLocation() {
+        return farmLocation;
+    }
+
+    public void setFarmLocation(String farmLocation) {
+        this.farmLocation = farmLocation;
+    }
+
+    public String getFarmer_existance() {
+        return farmer_existance;
+    }
+
+    public void setFarmer_existance(String farmer_existance) {
+        this.farmer_existance = farmer_existance;
     }
 
     public String getMajor_crops() {
@@ -196,6 +260,14 @@ public class FarmersModel {
         this.major_livestock = major_livestock;
     }
 
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
     public String getBvn() {
         return bvn;
     }
@@ -210,22 +282,6 @@ public class FarmersModel {
 
     public void setAgentName(String agentName) {
         this.agentName = agentName;
-    }
-
-    public Double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
-
-    public Double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
     }
 
     public String getFIN() {
@@ -243,5 +299,4 @@ public class FarmersModel {
     public void setFarmerImage(String farmerImage) {
         this.farmerImage = farmerImage;
     }
-
 }

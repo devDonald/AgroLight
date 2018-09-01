@@ -44,7 +44,7 @@ public class SearchAgent extends AppCompatActivity {
         mSearchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String searchText = mSearchField.getText().toString();
+                String searchText = mSearchField.getText().toString().trim();
                 showAgents(searchText);
             }
         });
@@ -89,6 +89,10 @@ public class SearchAgent extends AppCompatActivity {
             TextView tv_id= mView.findViewById(R.id.tv_agent_id);
             tv_id.setText(id);
         }
+        public void setState(String state){
+            TextView tv_id= mView.findViewById(R.id.tv_agent_state);
+            tv_id.setText(state);
+        }
 
         private SearchHolder.ClickListener mClickListener;
 
@@ -118,6 +122,7 @@ public class SearchAgent extends AppCompatActivity {
                 viewHolder.setLocation(model.getLga());
                 viewHolder.setAddress(model.getAddress());
                 viewHolder.setId(model.getAgentId());
+                viewHolder.setState(model.getState());
             }
 
             @Override

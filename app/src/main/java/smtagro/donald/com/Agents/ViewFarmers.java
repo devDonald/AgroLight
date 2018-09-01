@@ -110,7 +110,7 @@ public class ViewFarmers extends AppCompatActivity {
                 viewHolder.setName(model.getNames());
                 viewHolder.setPhone(model.getPhone_number());
                 viewHolder.setLocation(model.getLga());
-                viewHolder.setAddress(model.getCenter_name());
+                viewHolder.setAddress(model.getFarmLocation());
                 viewHolder.setFin(model.getFIN());
                 viewHolder.setState(model.getState());
             }

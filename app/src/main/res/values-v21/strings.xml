@@ -7,4 +7,13 @@
     <string name="admin_view_farmers">View All Farmers</string>
     <string name="label_lga">Local Government</string>
     <string name="search">Search Agent by First Name</string>
+    <string name="label_ward">Federal Ward</string>
+    <string name="label_village">Village</string>
+    <string name="label_mode">Mode of Identification</string>
+    <string name="qualification">Highest Qualification</string>
+    <string name="label_cooperative_loc">Location of Cooperative</string>
+    <string name="label_farm_location">Farm Location</string>
+    <string name="corp_details">Cooperative Details</string>
+    <string name="personal_profile">Personal Details</string>
+    <string name="label_farmer_type">New or Existing Farmer</string>
 </resources>

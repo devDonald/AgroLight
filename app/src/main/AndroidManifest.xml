@@ -31,7 +31,7 @@
     <application
         android:name=".utils.MyApplicationClass"
         android:allowBackup="true"
-        android:icon="@drawable/agro_logo"
+        android:icon="@drawable/agro"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -97,9 +97,10 @@
             android:name=".Admin.ShowFarms"
             android:label="AgroLight Registered Farms"
             android:screenOrientation="portrait" />
-        <activity android:name=".Agents.Farming"
+        <activity
+            android:name=".Agents.Farming"
             android:label="Report Farming Activities"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Admin.AdminLogin"
             android:screenOrientation="portrait" />
@@ -115,11 +116,12 @@
             android:name=".Admin.FarmerDetails"
             android:label="AgroLight Farmer"
             android:screenOrientation="portrait" />
-        <activity android:name=".Agents.Recovery"
+        <activity
+            android:name=".Agents.Recovery"
             android:label="Farm Produce Recovery"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Admin.FarmingReportView" />
+        <activity android:name=".Admin.RecoveryReportView"></activity>
     </application>
 
 </manifest>
