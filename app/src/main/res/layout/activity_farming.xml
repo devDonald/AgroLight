@@ -165,6 +165,72 @@
 
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tractorization"
+                            android:gravity="center"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+
+                        <Button
+                            android:hint="Date of Cultivation"
+                            android:id="@+id/report_date_of_cultivation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"/>
+                        <Button
+                            android:hint="Date of Sowing"
+                            android:id="@+id/report_date_of_planting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"/>
+                        <Button
+                            android:hint="Farm Clearing Date"
+                            android:id="@+id/report_date_of_clearing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Herbicide Application"
+                            android:gravity="center"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+
+                        <Button
+                            android:hint="Date of Pre-Emergence"
+                            android:id="@+id/report_date_of_preEm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"/>
+                        <Button
+                            android:hint="Date of Post-Emergence"
+                            android:id="@+id/report_date_of_postEm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"/>
+
+
+                    </LinearLayout>
 
 
                     <LinearLayout
@@ -193,19 +259,7 @@
 
 
                     </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
 
-                    <Button
-                        android:hint="Date of Sowing"
-                        android:id="@+id/report_date_of_planting"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border"/>
-                </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -232,6 +286,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/border"/>
                     </LinearLayout>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"

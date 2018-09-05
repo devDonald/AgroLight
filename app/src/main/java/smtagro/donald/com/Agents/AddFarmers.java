@@ -35,8 +35,9 @@ public class AddFarmers extends AppCompatActivity {
     private StorageReference farmersStorage,idStorage;
     private EditText mNames,mAge,mHouseHoldSize,mPhone,mFarmSize,mFarmLocation,mCooperativeLoc;
     private EditText mDistanceToMarket,mAvgIncomeFarming,mAvgIncomeNonFarming,mMajorCrop,mBVN;
-    private EditText mMajorLivestock,mMembership,mEnteredBy,mModeOfIdent,mLga;
-    private EditText mFederalWard,mVillage,mFarmerType,mEducationalQual;
+    private EditText mMajorLivestock,mMembership,mEnteredBy,mModeOfIdent,mLga,mChairman_name;
+    private EditText mFederalWard,mVillage,mFarmerType,mEducationalQual,mBank_name,mAccount_name,mAcct_no;
+    private EditText mTrainingAttended,mTrainingType;
     private ImageView mfarmerImage,displayIDCard;
     private Spinner mMaritalStatus,mGender,mState;
     private Button btSubmitFarmer,btIdentificationImage;
@@ -49,9 +50,9 @@ public class AddFarmers extends AppCompatActivity {
     private String cooperative_membership, major_crops;
     private String major_livestock,farm_location,cooperative_location,mode_of_identification;
     private String firstName,lastName,state,federal_ward,village,farmerType,educationalQual;
+    private String agentName,fBvn,bank_name,account_name,account_no,chairman_name;
+    private String FIN,id,agentID,training_attended,training_type;
     private Double longitude,latitude;
-    private String agentName,fBvn;
-    private String FIN,id,agentID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +89,12 @@ public class AddFarmers extends AppCompatActivity {
         mState = findViewById(R.id.sp_lga);
         mLga = findViewById(R.id.etLGA1);
         displayIDCard =findViewById(R.id.display_idcard);
+        mBank_name = findViewById(R.id.etBank_name1);
+        mAccount_name = findViewById(R.id.etAccount_name1);
+        mAcct_no = findViewById(R.id.etAccountNo1);
+        mChairman_name = findViewById(R.id.etChairmanName1);
+        mTrainingAttended = findViewById(R.id.et_any_training1);
+        mTrainingType = findViewById(R.id.et_training_type1);
 
         btSubmitFarmer = findViewById(R.id.btnRegister1);
 
@@ -164,6 +171,12 @@ public class AddFarmers extends AppCompatActivity {
                 village = mVillage.getText().toString().trim();
                 farmerType = mFarmerType.getText().toString().trim();
                 educationalQual = mEducationalQual.getText().toString().trim();
+                bank_name = mBank_name.getText().toString().trim();
+                account_name = mAccount_name.getText().toString().trim();
+                account_no = mAcct_no.getText().toString().trim();
+                chairman_name = mChairman_name.getText().toString().trim();
+                training_attended = mTrainingAttended.getText().toString().trim();
+                training_type = mTrainingType.getText().toString().trim();
 
                 if (TextUtils.isEmpty(names)){
                     mNames.setError("fill names");
@@ -203,7 +216,13 @@ public class AddFarmers extends AppCompatActivity {
                     mVillage.setError("fill Village");
                 } else if (TextUtils.isEmpty(farmerType)){
                     mFarmerType.setError("fill Existent or new");
-                } else if (gender.matches("Gender")){
+                } else if (TextUtils.isEmpty(bank_name)){
+                    mBank_name.setError("fill in Bank_Name");
+                } else if (TextUtils.isEmpty(account_name)){
+                    mAccount_name.setError("fill in Account Name");
+                } else if (TextUtils.isEmpty(account_no)){
+                    mAcct_no.setError("fill in Account No");
+                }else if (gender.matches("Gender")){
                     MDToast.makeText(getApplication(),"Select valid gender",
                             MDToast.LENGTH_LONG, MDToast.TYPE_ERROR).show();
                 } else if (state.matches("Select State")){
@@ -279,10 +298,11 @@ public class AddFarmers extends AppCompatActivity {
 
                     id = farmersDatabase.push().getKey();
                     FarmersModel model = new FarmersModel(names,gender,age,lga,state,marital_status,farm_size,household_size,
-                            phone_number,avg_income_non_farming,avg_income_farming,distance_to_market,latitude,
-                            cooperative_membership,cooperative_location,federal_ward,village,educationalQual,mode_of_identification,
-                            uri_displayID.toString(),farm_location,farmerType,major_crops,major_livestock,
-                            longitude,fBvn,agentName,FIN,downloadURI.toString());
+                            phone_number,avg_income_non_farming,avg_income_farming,distance_to_market,bank_name,
+                            account_name,account_no,training_attended,training_type,cooperative_membership,
+                            cooperative_location,chairman_name, federal_ward,village,educationalQual,
+                            mode_of_identification, uri_displayID.toString(),farm_location,
+                            farmerType,major_crops,major_livestock,fBvn,agentName,FIN,downloadURI.toString());
 
 
                     farmersDatabase.child(id).setValue(model);

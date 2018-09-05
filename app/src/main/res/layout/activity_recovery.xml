@@ -230,7 +230,7 @@
 
 
                         <EditText
-                            android:hint="Tractor Size"
+                            android:hint="Produce Size(KG)"
                             android:id="@+id/recovery_tractor_size"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

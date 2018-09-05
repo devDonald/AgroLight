@@ -4,7 +4,7 @@ public class FarmingModel {
 
     private String FIN,agentID,dateOfPlanting,expectedHarvestDate,dateOfFirstFertApplication;
     private String farmerName,typeOfCrop,agentName,dateOfNextFertApplication,inputAndQuantities;
-    private String farmDanger;
+    private String farmDanger,preEmergenceDate,postEmergenceDate,cultivationDate,clearingDate;
 
     public FarmingModel() {
     }
@@ -13,7 +13,8 @@ public class FarmingModel {
                         String expectedHarvestDate, String dateOfFirstFertApplication,
                         String farmerName, String typeOfCrop, String agentName,
                         String dateOfNextFertApplication, String inputAndQuantities,
-                        String farmDanger) {
+                        String farmDanger, String preEmergenceDate, String postEmergenceDate,
+                        String cultivationDate, String clearingDate) {
         this.FIN = FIN;
         this.agentID = agentID;
         this.dateOfPlanting = dateOfPlanting;
@@ -25,6 +26,10 @@ public class FarmingModel {
         this.dateOfNextFertApplication = dateOfNextFertApplication;
         this.inputAndQuantities = inputAndQuantities;
         this.farmDanger = farmDanger;
+        this.preEmergenceDate = preEmergenceDate;
+        this.postEmergenceDate = postEmergenceDate;
+        this.cultivationDate = cultivationDate;
+        this.clearingDate = clearingDate;
     }
 
     public String getFIN() {
@@ -113,5 +118,37 @@ public class FarmingModel {
 
     public void setFarmDanger(String farmDanger) {
         this.farmDanger = farmDanger;
+    }
+
+    public String getPreEmergenceDate() {
+        return preEmergenceDate;
+    }
+
+    public void setPreEmergenceDate(String preEmergenceDate) {
+        this.preEmergenceDate = preEmergenceDate;
+    }
+
+    public String getPostEmergenceDate() {
+        return postEmergenceDate;
+    }
+
+    public void setPostEmergenceDate(String postEmergenceDate) {
+        this.postEmergenceDate = postEmergenceDate;
+    }
+
+    public String getCultivationDate() {
+        return cultivationDate;
+    }
+
+    public void setCultivationDate(String cultivationDate) {
+        this.cultivationDate = cultivationDate;
+    }
+
+    public String getClearingDate() {
+        return clearingDate;
+    }
+
+    public void setClearingDate(String clearingDate) {
+        this.clearingDate = clearingDate;
     }
 }

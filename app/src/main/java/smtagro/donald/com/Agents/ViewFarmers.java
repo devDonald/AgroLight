@@ -24,6 +24,7 @@ public class ViewFarmers extends AppCompatActivity {
     private DatabaseReference farmersDatabase;
     private RecyclerView viewFarmersRecycler;
     private Context context=getBaseContext();
+    private Double longitude,latitude;
     private FirebaseRecyclerAdapter<FarmersModel,ViewFarmerHolder> firebaseRecyclerAdapter;
 
     @Override
@@ -37,6 +38,16 @@ public class ViewFarmers extends AppCompatActivity {
         viewFarmersRecycler.setLayoutManager(new LinearLayoutManager(context));
 
         farmersDatabase = FirebaseDatabase.getInstance().getReference().child("Farmers");
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+
+        if (bundle != null) {
+
+            latitude = bundle.getDouble("latitude");
+            longitude = bundle.getDouble("longitude");
+
+        }
+
     }
 
     public static class ViewFarmerHolder extends RecyclerView.ViewHolder{
@@ -127,7 +138,8 @@ public class ViewFarmers extends AppCompatActivity {
 
                         Intent wholeProfile=new Intent(ViewFarmers.this,FarmerDetails.class);
                         wholeProfile.putExtra("position",firebaseRecyclerAdapter.getRef(position).getKey());
-
+                        wholeProfile.putExtra("latitude",latitude);
+                        wholeProfile.putExtra("longitude",longitude);
                         startActivity(wholeProfile);
 
                     }

@@ -102,6 +102,7 @@ public class ShowFarms extends FragmentActivity implements OnMapReadyCallback,Lo
 
     @Override
     public boolean onMarkerClick(Marker marker) {
+
         return false;
     }
 

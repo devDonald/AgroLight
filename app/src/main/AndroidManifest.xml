@@ -121,7 +121,9 @@
             android:label="Farm Produce Recovery"
             android:screenOrientation="portrait" />
         <activity android:name=".Admin.FarmingReportView" />
-        <activity android:name=".Admin.RecoveryReportView"></activity>
+        <activity android:name=".Admin.RecoveryReportView" />
+        <activity android:name=".Agents.GetLocation"
+            android:label="Farmer's Coordinate"></activity>
     </application>
 
 </manifest>

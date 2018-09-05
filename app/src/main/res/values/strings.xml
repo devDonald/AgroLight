@@ -150,6 +150,12 @@
     <string name="personal_profile">Personal Details</string>
     <string name="label_farmer_type">New or Existing Farmer</string>
     <string name="fin">FIN</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="bank_info">Bank Information</string>
+    <string name="label_account_name">Account Name</string>
+    <string name="training">Training(Capacity Building)</string>
+    <string name="anytraining">Have you Attended Any Training?</string>
+    <string name="label_training_type">Type of training Attended</string>
 
     <string-array name="soo">
         <item>Select State</item>

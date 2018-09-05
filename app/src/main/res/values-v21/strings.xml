@@ -16,4 +16,6 @@
     <string name="corp_details">Cooperative Details</string>
     <string name="personal_profile">Personal Details</string>
     <string name="label_farmer_type">New or Existing Farmer</string>
+    <string name="bank_info">Bank Information</string>
+    <string name="training">Training(Capacity Building)</string>
 </resources>

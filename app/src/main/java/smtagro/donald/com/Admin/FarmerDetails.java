@@ -1,8 +1,11 @@
 package smtagro.donald.com.Admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,18 +16,21 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import smtagro.donald.com.Agents.GetLocation;
 import smtagro.donald.com.R;
 import smtagro.donald.com.models.FarmersModel;
 
 public class FarmerDetails extends AppCompatActivity {
     private TextView mNames,mAge,mHouseHoldSize,mPhone,mFarmSize,mFarmLocation,mCooperativeLoc;
     private TextView mDistanceToMarket,mAvgIncomeFarming,mAvgIncomeNonFarming,mMajorCrop,mBVN;
-    private TextView mLatitude,mLongitude,mMembership,mEnteredBy,mModeOfIdent,mLga,mGender,mState;
+    private TextView mMembership,mEnteredBy,mModeOfIdent,mLga,mGender,mState;
     private TextView mFederalWard,mVillage,mFarmerType,mEducationalQual,mMaritalStatus;
     private TextView mFIN;
     private ImageView mfarmerImage,mIdImage;
     private DatabaseReference farmerDatabase;
     private String position;
+    private Double longitude,latitude;
+    private Button getLocation;
 
 
     @Override
@@ -53,12 +59,12 @@ public class FarmerDetails extends AppCompatActivity {
         mGender = findViewById(R.id.farmer_detail_gender);
         mState = findViewById(R.id.farmer_detail_state);
         mLga = findViewById(R.id.farmer_detail_lga);
-        mLatitude = findViewById(R.id.farmer_detail_latitude);
-        mLongitude = findViewById(R.id.farmer_detail_longitude);
         mIdImage = findViewById(R.id.farmer_detail_id_image);
         mAvgIncomeNonFarming = findViewById(R.id.farmer_detail_avg_incomeN_farming);
         mHouseHoldSize = findViewById(R.id.farmer_detail_houseSize);
         mFIN = findViewById(R.id.farmer_detail_FIN);
+        getLocation = findViewById(R.id.bt_get_farmer_location);
+
 
 
         farmerDatabase = FirebaseDatabase.getInstance().getReference().child("Farmers");
@@ -66,6 +72,9 @@ public class FarmerDetails extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras!=null){
             position = extras.getString("position");
+            latitude = extras.getDouble("latitude");
+            longitude = extras.getDouble("longitude");
+            Log.d("latitude",""+latitude);
             if (position!=null){
                 DatabaseReference userRef = farmerDatabase.child(position);
 
@@ -77,17 +86,17 @@ public class FarmerDetails extends AppCompatActivity {
 
                         FarmersModel member = dataSnapshot.getValue(FarmersModel.class);
                         mFarmerType.setText("Farmer Type: "+member.getFarmer_existance());
-                        mAge.setText("Age: "+member.getAge());
-                        mAvgIncomeFarming.setText("Average Income on Farming "+member.getAvg_income_farming());
+                        mAge.setText("Age: "+member.getAge()+" Years");
+                        mAvgIncomeFarming.setText("Average Income on Farming: N "+member.getAvg_income_farming());
                         mNames.setText("Names: "+member.getNames());
                         mPhone.setText("Phone: "+member.getPhone_number());
                         mBVN.setText("BVN: "+member.getBvn());
                         mCooperativeLoc.setText("Cooperative Location: "+member.getCooperative_location());
-                        mDistanceToMarket.setText("Distance of Farm to Market: "+member.getDistance_to_market());
+                        mDistanceToMarket.setText("Distance of Farm to Market: "+member.getDistance_to_market()+" KM");
                         mEducationalQual.setText("Educational Qualification: "+member.getHighestQualification());
                         mEnteredBy.setText("Agent Name: "+member.getAgentName());
                         mFarmLocation.setText("Farm Location: "+member.getFarmLocation());
-                        mFarmSize.setText("Farm Size: "+member.getFarm_size());
+                        mFarmSize.setText("Farm Size: "+member.getFarm_size()+" Hectares");
                         mMajorCrop.setText("Major Crops: "+member.getMajor_crops());
                         mGender.setText("Gender: "+member.getGender());
                         mState.setText("State of Operation: "+member.getState());
@@ -97,9 +106,7 @@ public class FarmerDetails extends AppCompatActivity {
                         mVillage.setText("Village: "+member.getVillage());
                         mFederalWard.setText("Federal Ward: "+member.getFederal_ward());
                         mMaritalStatus.setText("Marital Status: "+member.getMarital_status());
-                        mLatitude.setText("Latitude: "+member.getLatitude());
-                        mLongitude.setText("Longitude: "+member.getLatitude());
-                        mAvgIncomeNonFarming.setText("Income on Non-Farming: "+member.getAvg_income_non_farming());
+                        mAvgIncomeNonFarming.setText("Income on Non-Farming: N "+member.getAvg_income_non_farming());
                         mHouseHoldSize.setText("Household Size: "+member.getHousehold_size());
                         mFIN.setText("FIN: "+member.getFIN());
 
@@ -123,5 +130,15 @@ public class FarmerDetails extends AppCompatActivity {
 
 
         }
+        getLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent getLocation = new Intent(FarmerDetails.this,GetLocation.class);
+                getLocation.putExtra("latitude",latitude);
+                getLocation.putExtra("longitude",longitude);
+                getLocation.putExtra("position",position);
+                startActivity(getLocation);
+            }
+        });
     }
 }

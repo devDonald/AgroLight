@@ -200,6 +200,8 @@ public class AgentMenu extends AppCompatActivity
 
         } else if (id == R.id.nav_view_farmers) {
              Intent viewFarmers = new Intent(AgentMenu.this,ViewFarmers.class);
+             viewFarmers.putExtra("latitude",latitude);
+             viewFarmers.putExtra("longitude",longitude);
              startActivity(viewFarmers);
 
         } else if (id == R.id.nav_change_password) {

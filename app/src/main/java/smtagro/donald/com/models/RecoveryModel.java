@@ -1,14 +1,14 @@
 package smtagro.donald.com.models;
 
 public class RecoveryModel {
-    private String FIN,agentID,dateOfHervest,noOfHectares,offTakeDate,tractorSize;
+    private String FIN,agentID,dateOfHervest,noOfHectares,offTakeDate,produceSize;
     private String offTakeCenter,farmerName,typeOfCrop,agentName;
 
     public RecoveryModel() {
     }
 
     public RecoveryModel(String FIN, String agentID, String dateOfHervest,
-                         String noOfHectares, String offTakeDate, String tractorSize,
+                         String noOfHectares, String offTakeDate, String produceSize,
                          String offTakeCenter, String farmerName,
                          String typeOfCrop, String agentName) {
         this.FIN = FIN;
@@ -16,7 +16,7 @@ public class RecoveryModel {
         this.dateOfHervest = dateOfHervest;
         this.noOfHectares = noOfHectares;
         this.offTakeDate = offTakeDate;
-        this.tractorSize = tractorSize;
+        this.produceSize = produceSize;
         this.offTakeCenter = offTakeCenter;
         this.farmerName = farmerName;
         this.typeOfCrop = typeOfCrop;
@@ -63,12 +63,12 @@ public class RecoveryModel {
         this.offTakeDate = offTakeDate;
     }
 
-    public String getTractorSize() {
-        return tractorSize;
+    public String getProduceSize() {
+        return produceSize;
     }
 
-    public void setTractorSize(String tractorSize) {
-        this.tractorSize = tractorSize;
+    public void setProduceSize(String produceSize) {
+        this.produceSize = produceSize;
     }
 
     public String getOffTakeCenter() {
