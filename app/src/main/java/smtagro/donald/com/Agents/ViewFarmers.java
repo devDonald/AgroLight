@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-import smtagro.donald.com.Admin.FarmerDetails;
 import smtagro.donald.com.R;
 import smtagro.donald.com.models.FarmersModel;
 

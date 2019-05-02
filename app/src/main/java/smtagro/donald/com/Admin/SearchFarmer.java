@@ -1,6 +1,7 @@
 package smtagro.donald.com.Admin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -135,11 +136,11 @@ public class SearchFarmer extends AppCompatActivity {
                     public void onItemClick(View view, int position) {
 
                         //Toast.makeText(getApplicationContext(), "Item clicked at " + position, Toast.LENGTH_SHORT).show();
-//
-//                        Intent wholeProfile=new Intent(SearchFarmer.this,FarmerDetails.class);
-//                        wholeProfile.putExtra("position",firebaseRecyclerAdapter.getRef(position).getKey());
-//
-//                        startActivity(wholeProfile);
+
+                        Intent wholeProfile=new Intent(SearchFarmer.this, FarmerDetailsAdmin.class);
+                        wholeProfile.putExtra("position",firebaseRecyclerAdapter.getRef(position).getKey());
+
+                        startActivity(wholeProfile);
 
                     }
 

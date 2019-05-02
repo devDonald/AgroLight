@@ -26,6 +26,8 @@ import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.io.ByteArrayOutputStream;
 import java.security.SecureRandom;
+import java.text.DateFormat;
+import java.util.Date;
 
 import smtagro.donald.com.R;
 import smtagro.donald.com.models.FarmersModel;
@@ -53,10 +55,12 @@ public class AddFarmers extends AppCompatActivity {
     private String agentName,fBvn,bank_name,account_name,account_no,chairman_name;
     private String FIN,id,agentID,training_attended,training_type;
     private Double longitude,latitude;
+    private String registrationDate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_farmers);
+        registrationDate = DateFormat.getDateTimeInstance().format(new Date());
 
         farmersDatabase = FirebaseDatabase.getInstance().getReference().child("Farmers");
         farmersStorage = FirebaseStorage.getInstance().getReference().child("Farmers");
@@ -307,6 +311,7 @@ public class AddFarmers extends AppCompatActivity {
 
                     farmersDatabase.child(id).setValue(model);
                     farmersDatabase.child(id).child("agentID").setValue(agentID);
+                    farmersDatabase.child(id).child("dateRegistered").setValue(registrationDate);
                     hud.dismiss();
                     MDToast.makeText(getApplication(),"Farmer Added Successfully",
                             MDToast.LENGTH_LONG, MDToast.TYPE_SUCCESS).show();

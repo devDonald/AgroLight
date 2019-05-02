@@ -8,12 +8,11 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import smtagro.donald.com.Agents.ViewFarmers;
 import smtagro.donald.com.LandingPage;
 import smtagro.donald.com.R;
 
 public class AdminMenu extends AppCompatActivity {
-    private Button showFarms,searchAgent,searchFarmer,addAgent, viewAgents,viewFarmers,logout;
+    private Button showFarms,searchAgent,addAgent, viewAgents,viewFarmers,logout;
     private FirebaseAuth mAuth;
 
 
@@ -26,7 +25,6 @@ public class AdminMenu extends AppCompatActivity {
 
         showFarms =findViewById(R.id.btn_admin_show_farms);
         searchAgent = findViewById(R.id.btn_admin_search_agent);
-        searchFarmer = findViewById(R.id.btn_admin_search_farmer);
         addAgent = findViewById(R.id.btn_admin_register_agent);
         viewAgents = findViewById(R.id.btn_admin_view_agents);
         viewFarmers = findViewById(R.id.btn_admin_view_farmers);
@@ -47,14 +45,7 @@ public class AdminMenu extends AppCompatActivity {
                 startActivity(searchAgent);
             }
         });
-        searchFarmer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent searchFarmer = new Intent(AdminMenu.this,SearchFarmer.class);
-                startActivity(searchFarmer);
-            }
-        });
         addAgent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +63,7 @@ public class AdminMenu extends AppCompatActivity {
         viewFarmers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent viewFarmers = new Intent(AdminMenu.this,ViewFarmers.class);
+                Intent viewFarmers = new Intent(AdminMenu.this,ViewFarmersAdmin.class);
                 startActivity(viewFarmers);
             }
         });

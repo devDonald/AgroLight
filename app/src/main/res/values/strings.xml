@@ -156,6 +156,7 @@
     <string name="training">Training(Capacity Building)</string>
     <string name="anytraining">Have you Attended Any Training?</string>
     <string name="label_training_type">Type of training Attended</string>
+    <string name="search_farmer">Search farmer by FIN</string>
 
     <string-array name="soo">
         <item>Select State</item>

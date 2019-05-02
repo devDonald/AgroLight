@@ -1,4 +1,4 @@
-package smtagro.donald.com.Admin;
+package smtagro.donald.com.Agents;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +16,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import smtagro.donald.com.Agents.GetLocation;
 import smtagro.donald.com.R;
 import smtagro.donald.com.models.FarmersModel;
 
@@ -141,4 +140,6 @@ public class FarmerDetails extends AppCompatActivity {
             }
         });
     }
+
+
 }

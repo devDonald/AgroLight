@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Farmer's Longitude:  "/>
-                <TextView
+                <EditText
                     android:layout_marginLeft="22dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Farmer's Latitude "/>
-                <TextView
+                <EditText
                     android:layout_marginLeft="22dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

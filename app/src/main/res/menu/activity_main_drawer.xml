@@ -21,15 +21,18 @@
             android:id="@+id/nav_report_recovery"
             android:icon="@drawable/report"
             android:title="Report Recovery" />
+
         <item
             android:id="@+id/nav_change_password"
             android:icon="@drawable/ic_password"
             android:title="Change Password" />
 
+
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/exit_app"
             android:title="Logout" />
+
 
     </group>
 

@@ -53,18 +53,6 @@
                         android:textSize="18sp" />
 
 
-                    <Button
-                        android:id="@+id/btn_admin_search_farmer"
-                        android:layout_width="match_parent"
-                        android:drawableLeft="@android:drawable/ic_menu_search"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/color_brown"
-                        android:text="@string/admin_search_farmer"
-                        android:textAllCaps="false"
-                        android:textColor="#fff"
-                        android:textSize="18sp" />
-
 
                     <Button
                         android:id="@+id/btn_admin_register_agent"

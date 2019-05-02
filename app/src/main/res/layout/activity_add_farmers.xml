@@ -41,6 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/personal_profile"
+                        android:textColor="@color/colorPrimary"
                         android:layout_marginLeft="@dimen/text_margin"
                         android:layout_marginRight="@dimen/text_margin"
                         android:layout_marginTop="15dp" />
@@ -269,6 +270,7 @@
                     android:elevation="6dp">
 
                     <TextView style="@style/Categories"
+                        android:textColor="@color/colorPrimary"
                         android:id="@+id/label_farm_profile"
                         android:text="@string/farm_label"
                         android:layout_width="wrap_content"
@@ -417,6 +419,7 @@
                     android:elevation="6dp">
 
                     <TextView style="@style/Categories"
+                        android:textColor="@color/colorPrimary"
                         android:id="@+id/label_training_profile1"
                         android:text="@string/training"
                         android:layout_width="wrap_content"
@@ -489,6 +492,7 @@
                         android:text="@string/corp_details"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
                         android:layout_marginLeft="@dimen/text_margin"
                         android:layout_marginRight="@dimen/text_margin"
                         android:imeOptions="actionNext"
@@ -565,6 +569,7 @@
                     android:elevation="6dp">
 
                     <TextView style="@style/Categories"
+                        android:textColor="@color/colorPrimary"
                         android:id="@+id/label_bank_profile1"
                         android:text="@string/bank_info"
                         android:layout_width="wrap_content"
@@ -665,12 +670,12 @@
 
 
                 <Button
+                    android:background="@color/colorPrimary"
                     android:id="@+id/btnRegister1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
                     android:layout_marginTop="5dp"
-                    android:background="@color/colorAccent"
                     android:minHeight="@dimen/demo_button_min_height"
                     android:minWidth="@dimen/demo_button_min_width"
                     android:text="@string/register_button"

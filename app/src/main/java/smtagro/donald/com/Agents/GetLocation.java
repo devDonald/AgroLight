@@ -7,7 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,7 +19,7 @@ import com.valdesekamdem.library.mdtoast.MDToast;
 import smtagro.donald.com.R;
 
 public class GetLocation extends AppCompatActivity {
-    private TextView mLongitude,mLatitude;
+    private EditText mLongitude,mLatitude;
     private Button submitCoordinate;
     private DatabaseReference mFarmersDatabase;
     private String position;
@@ -36,7 +36,7 @@ public class GetLocation extends AppCompatActivity {
         hud = KProgressHUD.create(GetLocation.this)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
                 .setLabel("Please wait")
-                .setDetailsLabel("Adding Farmer...")
+                .setDetailsLabel("Sending Coordinate...")
                 .setCancellable(true)
                 .setAnimationSpeed(2)
                 .setDimAmount(0.5f)
